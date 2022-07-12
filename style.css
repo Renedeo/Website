@@ -1,0 +1,122 @@
+:root {
+    --nav-bar-background-color: rgb(243, 243, 243);
+    --nav-bar-item-color: black;
+    --nav-bar-item-hover-background-color: rgb(209, 209, 209);
+    --nav-bar-dropdown-menu-background-color: aliceblue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+/*************************** NAVIGATION ************************************/
+/* Barre de navigation */
+
+#nav-bar {
+    background-color: var(--nav-bar-background-color);
+    top: 0;
+    width: 100%;
+    position: fixed;
+    border-bottom-left-radius: 20px ;   
+    opacity : 0.9; 
+}
+
+/* Menu */
+#nav-bar-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    overflow: hidden;
+}
+
+
+.logo {
+    float: left;
+}
+/* Lien du menu */
+.navbar-link {
+    display: block;
+    color: var(--nav-bar-item-color);
+    padding: 19px ;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    background-color: var(--nav-bar-item-hover-background-color);
+    border-bottom-left-radius: 20px;
+}
+
+/*********************** PRESTATION ---- DROPDOWN MENU ---- MENU ITEM *************************/
+
+.dropdown-menu, .nav-bar-item{
+    float: right;
+}
+
+/* dropdown menu */
+.dropdown-menu-content {
+    list-style-type: none;
+    display: none;
+    position: absolute;
+    background-color: var(--nav-bar-dropdown-menu-background-color);
+    border-bottom-left-radius: 20px;
+    opacity: 0.9;
+    padding: 0px;
+}
+
+/* Lien dropdown*/
+.dropdown-link {
+    color: var(--nav-bar-item-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Au survol du menu dropdown avec la souris*/
+.dropdown-menu:hover .dropdown-menu-content {
+    display: block;
+    color : var(--nav-bar-background-color)
+}
+
+
+/************************************ CORPS DU SITE ***********************************/
+
+#acceuil {
+    padding-top: 3rem;
+    height: 700px;
+    background: url(aedrian-aECyL9yaHHw-unsplash.jpg) fixed no-repeat ;
+    background-size: cover;
+    
+}
+
+#presentation {
+    background-color: var(--nav-bar-background-color);
+    opacity: 0.9;
+    float: left;
+    margin: 600px 50% 100px 0;
+
+    
+}
+
+#prestation h2 {
+    background-color: var(--nav-bar-background-color);
+}
+
+#prestation #analyse .presta,
+#prestation #formation .prestf{ 
+    height: 50%;
+    width: 300px;
+} 
+
+#prestation #analyse,
+#prestation #formation{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+} 
+
+
