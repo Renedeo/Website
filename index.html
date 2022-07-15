@@ -14,22 +14,38 @@
 <body>
     <header>
         <nav id="nav-bar">
+            <p class="logo">
+                <a href="#" >Polygon Consulting</a></p>
+            <input id="nav-toggle" type="checkbox">
             <ul id="nav-bar-menu">
-                <li class="logo"><a href="#" class="navbar-link">Polygon Consulting</a></li>
 
-                <li class="nav-bar-item"><a href="#contact" class="navbar-link">contact</a></li>
-                <li class="nav-bar-item"><a href="#realisation" class="navbar-link">Réalisation</a></li>
-                <li class="dropdown-menu "><a href="#prestation" class="navbar-link">Prestation <i
+                <li class="nav-bar-item">
+                    <a href="#contact" class="navbar-link"> Contact </a></li>
+                <li class="nav-bar-item">
+                    
+                    <a href="#realisation" class="navbar-link"> Réalisation </a></li>
+                
+                <!-------------------drop menu------------------------------------>
+                <li class="nav-bar-item ">
+                    <a href="#prestation" class="navbar-link"> Prestations 
+                        <i
                             class="fa fa-caret-down"></i></a>
 
-                    <ul class="dropdown-menu-content">
-                        <li><a href="#analayse" class="dropdown-link">Analyse</a></li>
-                        <li><a href="#formation" class="dropdown-link">Formation</a></li>
-                    </ul>
+                            <ul class="dropdown-menu-content">
+                                <li class="nav-bar-item">
+                                    <a href="#analayse" class="dropdown-link">Analyse </a></li>
+                                <li class="nav-bar-item">
+                                    <a href="#formation" class="dropdown-link"> Formation</a></li>
+                            </ul>
 
                 </li>
 
             </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
         </nav>
     </header>
 
@@ -126,6 +142,22 @@
         <h1>Ils m'ont fait confiance ...</h1>
 
         <div class="reference">
+            <img src="image\Reference\auchan.jpg" alt="auchan">
+            <img src="image\Reference\bic.jpg" alt="bic">
+            <img src="image\Reference\Bizbee.jpg" alt="Bizbee">
+            <img src="image\Reference\bonduelle.jpg" alt="bonduelle">
+            <img src="image\Reference\brice.ico" alt="brice">
+            <img src="image\Reference\cofidis.jpg" alt="cofidis">
+            <img src="image\Reference\Credit Agricole.png" alt="Credit Agricole">
+            <img src="image\Reference\decathlon.png" alt="decathlon">
+            <img src="image\Reference\electro depot.png" alt="electro depot">
+            <img src="image\Reference\eurovent certita.jpg" alt="eurovent certita">
+            <img src="image\Reference\groupepormona.jpg" alt="groupepormona">
+            <img src="image\Reference\kiabi.jpg" alt="kiabi">
+            <img src="image\Reference\M6 boutique.png" alt="M6 boutique">
+            <img src="image\Reference\maggi.png" alt="maggi">
+            <img src="image\Reference\nexity.png" alt="hexity">
+            <img src="image\Reference\oney.jpg" alt="oney">
 
         </div>
 
@@ -149,9 +181,9 @@
     <footer id="contact">
         <h1>Nous Contacter</h1>
         <form>
-            <input type="text" placeholder="nom" id="nom">
-            <input type="email" placeholder="example@gmail.com" id="email">
-            <textarea type="message" placeholder="Message ..." id="message"></textarea>
+            <input type="text" placeholder="nom" class="nom">
+            <input type="email" placeholder="example@gmail.com" class="email">
+            <textarea type="message" placeholder="Message ..." class="message"></textarea>
             <button>Envoyer</button>
         </form>
         <div id ="trait"></div>
@@ -160,8 +192,8 @@
                 © Copyrigth Polygon Consulting 2022
             </div>
             <div id="icons"> 
-                <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
-                <a href = "https://twitter.com"><i class="fa fa-twitter"> </i> </a>   
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href = ""><i class="fa fa-twitter"> </i> </a>   
             </div>
         </div> 
 
