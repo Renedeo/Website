@@ -43,10 +43,6 @@ h1 {
 .logo {
     color: var(--nav-bar-item-color);
     float: left;
-    padding: 16px;
-    margin: 5px  ;
-    left: 0;
-    top: 0;
 }
 .logo a {
     color: var(--nav-bar-item-color);
@@ -151,7 +147,6 @@ nav .icon-burger .line{
     /* RESPONSIVE MENU BAR  */
     .logo{
         text-align: left;
-        width: 50%;
     }
 
     #presentation{
@@ -210,6 +205,10 @@ nav .icon-burger .line{
     .nav-bar-item:hover + .dropdown-menu-content {
         max-height: 5rem;
     }
+
+    .reference img{
+        overflow: scroll;
+    }
     
 }
 
@@ -263,13 +262,10 @@ nav .icon-burger .line{
 } 
 
 .reference {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(5,10fr);
-    overflow: scroll;
-    max-height: 500px;
-
-
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 .reference img {  
     /* padding: 10px;
@@ -277,12 +273,13 @@ nav .icon-burger .line{
     height:200px;
     width: 200px;
     transition: all 0.5s ease-in-out; 
+    filter: grayscale(10);
+    /* box-sizing: border-box; */
+    /* animation: slide 2s; */
 }
 
 .reference img:hover {
     transform: scale(1.1); 
-    border
-    
 }
 
 /* ************************************** FOOTER ****************************************/
@@ -325,3 +322,23 @@ button:hover{
 }
 
 
+/**************** ANIMATION **********************/
+@keyframes slide {
+    from {
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
+
+@keyframes resize {
+    from {
+        right: 50%;
+    }
+    to {
+        width: 90%
+    }
+}
