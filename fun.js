@@ -1,48 +1,69 @@
-$( function () {
-    var charts = $("#reference");
+const ratio = 0.5;
+let observer = null;
 
-    /* FUNCTIONS */
-
-    // Return boolean when an element is partially visible on screen
-    function isPartialVisible(element) {
-        var
-            viewPortHeight = $(window).height(), // Viewport Height
-            scrollTop = $(window).scrollTop(), // Scroll Top
-            currElementPosY = $(element).offset().top,
-            elementHeight = $(element).height();
-
-        return ((currElementPosY + elementHeight + elementHeight) > scrollTop && currElementPosY < (viewPortHeight + scrollTop));
+// Selectionner les element
+const spies = document.querySelectorAll(".data-spy");
+/**
+ *  Fait appel a la fonction activate sur l'element intercepté
+ * 
+ * @param {IntersectionObserverEntry[]} entries
+ * @param {intersectionObserver} observer
+ */
+const callback = function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+        activate(entry.target);
     }
+  });
+};
 
-    // Return boolean when an element is wholly visible on screen
-    function isWholeVisible(element) {
-        var
-            viewPortHeight = $(window).height(), // Viewport Height
-            scrollTop = $(window).scrollTop(), // Scroll Top
-            currElementPosY = $(element).offset().top,
-            elementHeight = $(element).height();
+/**
+ *  Ajoute une nouvelle classe à chaque element  
+ * en supprimant les anciens 
+ * 
+ * @param {HTMLElement} element
+ */
+const activate = function (element) {
+  const id = element.getAttribute("id");
+  const anchor = document.querySelector(`a[href="#${id}"]`);
 
-        return (currElementPosY > scrollTop && currElementPosY + elementHeight < (viewPortHeight + scrollTop));
-    }
+  if (anchor === null) {
+    return null;
+  }
+  anchor.parentElement.parentElement
+    .querySelectorAll(".active ")
+    .forEach((node) => node.classList.remove("active"));
 
-    // Animate chart only when you see it
-    function animateChartWhenVisible(chart) {
-        for (var i = 0, count = chart.length; i < count; i++) {
-            if (isWholeVisible(chart[i])) {
-                $(chart[i]).addClass("slide");
-            }
-        }
-    }
+  anchor.classList.add("active");
+};
 
-    /* FUNCTIONS END */
-
-    // On scroll
-    $(window).scroll(function () {
-        animateChartWhenVisible(charts);
+/**
+ *  Update l'observer de chaque element si la taille
+ *  fenetre a été modifiée
+ * 
+ * @param {NodeListof.<Element>} elems
+ */
+const scrollspy = function (elems) {
+  if (observer !== null) {
+    elems.forEach((elem) => {
+      observer.unobserve(elem);
     });
+  }
+  const y = Math.round(window.innerHeight * ratio);
 
-    /* On load */
-    animateChartWhenVisible(charts);
+  observer = new IntersectionObserver(callback, {
+    rootMargin: `-${window.innerHeight - y - 1}px 0px -${y}px 0px`
+
+  })
+  spies.forEach((spy) => observer.observe(spy));
+}
 
 
-})
+// Si il y a des éléments sélectionner
+if (spies.length > 0) {
+  scrollspy(spies);
+  // Si il y a resize de la fenêtre 
+  window.addEventListener("resize", () => {
+    scrollspy(spies);
+  });
+}

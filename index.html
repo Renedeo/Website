@@ -7,39 +7,42 @@
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <script type="text/javascript" src="fun.js"></script>
     <title>Polygon Consulting</title>
 </head>
 
 <body>
     <header>
         <nav id="nav-bar">
+            
             <p class="logo">
-                <a href="#" >Polygon Consulting</a></p>
+                <a href="#" class = "navbar-link">Polygon Consulting</a>
+            </p>
             <input id="nav-toggle" type="checkbox">
             <ul id="nav-bar-menu">
-
-                <li class="nav-bar-item">
-                    <a href="#contact" class="navbar-link"> Contact </a></li>
-                <li class="nav-bar-item">
-                    
-                    <a href="#realisation" class="navbar-link"> Réalisation </a></li>
                 
                 <!-------------------drop menu------------------------------------>
-                <li class="nav-bar-item ">
-                    <a href="#prestation" class="navbar-link"> Prestations 
-                        <i
-                            class="fa fa-caret-down"></i></a>
-
-                            <ul class="dropdown-menu-content">
-                                <li class="nav-bar-item">
-                                    <a href="#analayse" class="dropdown-link">Analyse </a></li>
-                                <li class="nav-bar-item">
-                                    <a href="#formation" class="dropdown-link"> Formation</a></li>
-                            </ul>
+                <li class="nav-bar-item dropdown">
+                    <a href="#prestation" class="navbar-link"> Prestations
+                        <i class="fa fa-caret-down"></i></a>
+                        
+                        <ul class="dropdown-menu-content">
+                            <li class="nav-bar-item">
+                            <a href="#analyse" class="dropdown-link ">Analyse </a>
+                        </li>
+                        <li class="nav-bar-item">
+                            <a href="#formation" class="dropdown-link"> Formation</a>
+                        </li>
+                    </ul>
 
                 </li>
-
+                
+                <li class="nav-bar-item">
+    
+                    <a href="#realisation" class="navbar-link"> Réalisation </a>
+                </li>
+                <li class="nav-bar-item">
+                    <a href="#contact" class="navbar-link"> Contact </a>
+                </li>
             </ul>
             <label for="nav-toggle" class="icon-burger">
                 <div class="line"></div>
@@ -48,10 +51,10 @@
             </label>
         </nav>
     </header>
-
+    <hr>
     <!------------------------------------------------------------------------>
-    <section id="acceuil">
-        <div id="presentation">
+    <section id="acceuil" >
+        <div id="presentation" class = "data-spy">
             <h1>Polygon Consulting</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore ratione quae eius atque, aperiam
                 impedit? Quos laborum, ad inventore, fugiat minima natus error veritatis beatae eius, odit quia ab sint
@@ -64,7 +67,7 @@
     </section>
 
     <!------------------------------------------------------------------------>
-    <section id="prestation">
+    <section id="prestation" class = "data-spy">
         <h1> Prestations </h1>
         <h2>Analyse</h2>
         <div id="analyse">
@@ -136,49 +139,81 @@
 
     <!------------------------------------------------------------------------>
 
-    <section id="realisation">
-        <!------------------------------------------------------------>
-
-        <h1>Ils m'ont fait confiance ...</h1>
-
-        <div class="reference">
-            <img src="image\imgdwld\auchan.png" alt="auchan">
-            <img src="image\Reference\bic.jpg" alt="bic">
-            <img src="image\Reference\Bizbee.jpg" alt="Bizbee">
-            <img src="image\imgdwld\bonduelle.png" alt="bonduelle">
-            <img src="image\Reference\brice.ico" alt="brice">
-            <img src="image\Reference\cofidis.jpg" alt="cofidis">
-            <img src="image\imgdwld\Credit Agricole.jpg" alt="Credit Agricole">
-            <img src="image\Reference\decathlon.png" alt="decathlon">
-            <img src="image\Reference\electro depot.png" alt="electro depot">
-            <img src="image\Reference\eurovent certita.jpg" alt="eurovent certita">
-            <img src="image\Reference\groupepormona.jpg" alt="groupepormona">
-            <img src="image\imgdwld\kiabi.jpg" alt="kiabi">
-            <img src="image\Reference\M6 boutique.png" alt="M6 boutique">
-            <img src="image\Reference\maggi.png" alt="maggi">
-            <img src="image\Reference\nexity.png" alt="hexity">
-            <img src="image\imgdwld\oney.jpg" alt="oney">
-
-        </div>
-
-        <!------------------------------------------------------------>
-
-        <h1> Nos partenaires </h1>
-        <div class="reference">
-
-        </div>
-
+    <section id="realisation" class = "data-spy">
         <!------------------------------------------------------------>
 
         <h1> A propos de moi ... </h1>
+        <section class="apropos">
+            <div class = "photo">
+                photo
+            </div>
+        </section>
+        <!------------------------------------------------------------>
+         
+        
+        <h1>Ils m'ont fait confiance ...</h1>
+        
         <div class="reference">
+                <img src="image\Reference\auchan.jpg" alt="auchan">
+            
+                <img src="image\Reference\electro depot.png" alt="electro depot">
+            
+                <img src="image\Reference\oney.jpg" alt="oney">
+
+                <img src="image\Reference\Credit Agricole.png" alt="Credit Agricole">
+            
+                <img src="image\Reference\brice.jpg" alt="brice">    
+            
+                <img src="image\Reference\decathlon.png" alt="decathlon">
+            
+                <img src="image\Reference\norauto.png" alt="brice">
+            
+                <img src="image\Reference\Bizbee.jpg" alt="Bizbee">
+
+                <img src="image\Reference\kiabi.jpg" alt="kiabi">
+            
+                <img src="image\Reference\maggi.png" alt="maggi">
+            
+                <img src="image\Reference\M6 boutique.png" alt="M6 boutique">
+            
+                <img src="image\Reference\cofidis.jpg" alt="cofidis">
+            
+                <img src="image\Reference\nexity.png" alt="hexity">
+            
+                <img src="image\Reference\bic.jpg" alt="bic">
+            
+                <img src="image\Reference\bonduelle.jpg" alt="bonduelle">
+            
+                <img src="image\Reference\eurovent certita.jpg" alt="eurovent certita">
+            
+                <img src="image\Reference\groupepormona.jpg" alt="groupepormona">
+   
 
         </div>
 
         <!------------------------------------------------------------>
-    </section>
 
-    <footer id="contact">
+        <h1> Principaux outils </h1>
+        <div class="reference">
+            <img src="image\Outil\googleanalytic.jpg" alt="">
+            <img src="image\Outil\googletagmanager.jpg" alt="">
+            <img src="image\Outil\Google Data Studio.jpg" alt="">
+            <img src="image\Outil\Adobe aomniture.png" alt="">
+            <img src="image\Outil\AtInternet.png" alt="">
+            <img src="image\Outil\excel.jpg" alt="">
+            <img src="image\Outil\pawerBI.png" alt="">
+            <img src="image\Outil\Tableau.png" alt="">
+            <img src="image\Outil\tagassistantgoogle.png" alt="">
+            <img src="image\Outil\bussinessObject.jpg" alt="">
+            <img src="image\Outil\Commanderact.jpg" alt="">
+            <img src="image\Outil\Qlik.png" alt="">
+        </div>
+
+
+        <!------------------------------------------------------------>
+    </section >
+
+    <footer id="contact" class = "data-spy">
         <h1>Nous Contacter</h1>
         <form>
             <input type="text" placeholder="nom" class="nom">
@@ -186,18 +221,25 @@
             <textarea type="message" placeholder="Message ..." class="message"></textarea>
             <button>Envoyer</button>
         </form>
-        <div id ="trait"></div>
+
+        <div class="trait"></div>
+        <p> Autre moyen de communication</p>
+        <div class="trait"></div>
+        
+
         <div id="copyrightandicons">
             <div id="copyright">
                 © Copyrigth Polygon Consulting 2022
             </div>
-            <div id="icons"> 
+            <div id="icons">
                 <a href=""><i class="fa fa-facebook"></i></a>
-                <a href = ""><i class="fa fa-twitter"> </i> </a>   
+                <a href=""><i class="fa fa-twitter"> </i> </a>
             </div>
-        </div> 
+        </div>
 
     </footer>
+    <script type="text/javascript" src="fun.js"></script>
+    <script type="text/javascript" src="fun-anim.js"></script>
 </body>
 
 
