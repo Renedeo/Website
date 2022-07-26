@@ -16,5 +16,4 @@ window.addEventListener("resize",
     () => {
         let ddm = document.querySelector(".dropdow-menu-content")
         let nb = document.querySelector("#nav-bar")
-
 })

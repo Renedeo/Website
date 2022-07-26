@@ -231,9 +231,12 @@ nav .icon-burger .line{
 /************************************ CORPS DU SITE ***********************************/
 
 /* PRESENTATION */
+section{
+    margin: auto 5%;
+
+}
 #acceuil {
     background: url(aedrian-aECyL9yaHHw-unsplash.jpg) fixed;
-    margin: auto 5%;
     height: 500px;
 }
 
@@ -255,19 +258,9 @@ nav .icon-burger .line{
 #prestation h2 {
     background-color: var(--section-prest-titles-background-color);
     height: 100px;
+    
 }
 
-
-
-#prestation #analyse .presta,
-#prestation #formation .prestf{ 
-    background-color: var(--section-prest-background-color);
-    margin-bottom: 5rem;
-    margin-top: -80px;
-    height: 50%;
-    width: 300px;
-
-} 
 
 #prestation #analyse,
 #prestation #formation{ 
@@ -275,6 +268,17 @@ nav .icon-burger .line{
     display: flex;
     flex-wrap:  wrap;
 } 
+
+.presta,
+.prestf{ 
+    background-color: var(--section-prest-background-color);
+    margin-bottom: 5rem;
+    margin-top: -80px;
+    height: 50%;
+    width: 500px
+} 
+
+
 
 #realisation h1{
     margin-bottom: 50px;
@@ -309,11 +313,19 @@ form {
     margin: 0 auto;
 }
 input,
+textarea{
+    border-bottom: 2px solid maroon;
+    
+}
+input,
 textarea,
 button{
     padding: 15px 10px;
     border-radius: 8px;
-    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    
     margin: 5px 0;
     width:55%;
     font-size: 1.2em;
@@ -321,6 +333,8 @@ button{
 textarea { 
     resize: vertical;
     height: 100px;
+    max-height: 200px;
+    min-height: 100px;
 }
 button:hover{
     cursor: pointer;
@@ -345,10 +359,11 @@ button:hover{
     
 }
 
+
 /**************** ANIMATION **********************/
 @keyframes slide {
     from {
-        transform: translateX(1000px);
+        transform: translateY(500px);
         opacity: 0;
     }
     to {
@@ -357,7 +372,7 @@ button:hover{
     }
 }
 .img-animation {
-    animation: slide 1s ease-in-out;
+    animation: slide .5s;
 }
 
 hr {

@@ -20,7 +20,7 @@
             <input id="nav-toggle" type="checkbox">
             <ul id="nav-bar-menu">
                 
-                <!-------------------drop menu------------------------------------>
+            <!-------------------drop menu------------------------------------>
                 <li class="nav-bar-item dropdown">
                     <a href="#prestation" class="navbar-link"> Prestations
                         <i class="fa fa-caret-down"></i></a>
@@ -35,7 +35,7 @@
                     </ul>
 
                 </li>
-                
+            <!--------------------------------------------------------------->    
                 <li class="nav-bar-item">
     
                     <a href="#realisation" class="navbar-link"> Réalisation </a>
@@ -43,16 +43,17 @@
                 <li class="nav-bar-item">
                     <a href="#contact" class="navbar-link"> Contact </a>
                 </li>
+            <!---------------------------------------------------------------->
             </ul>
             <label for="nav-toggle" class="icon-burger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </label>
+            <!------------------------------------------------------------------------>
         </nav>
     </header>
     <hr>
-    <!------------------------------------------------------------------------>
     <section id="acceuil" >
         <div id="presentation" class = "data-spy">
             <h1>Polygon Consulting</h1>
@@ -216,10 +217,16 @@
     <footer id="contact" class = "data-spy">
         <h1>Nous Contacter</h1>
         <form>
-            <input type="text" placeholder="nom" class="nom">
-            <input type="email" placeholder="example@gmail.com" class="email">
-            <textarea type="message" placeholder="Message ..." class="message"></textarea>
-            <button>Envoyer</button>
+            <div>
+                <input type="text" placeholder ="Nom" class="nom" required>
+            </div>
+            <div>
+                <input type="email" placeholder="example@gmail.com" class="email">
+            </div>
+            <div>
+                <textarea type="message" placeholder="Message ..." class="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
 
         <div class="trait"></div>
