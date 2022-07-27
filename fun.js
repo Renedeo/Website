@@ -68,16 +68,3 @@ if (spies.length > 0) {
 
 /* ***************************BOUTON***************************** */
 
-// var btn = document.querySelector('.btn');
-
-// btn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   const textarea = document.querySelector('.nom')
-//   console.log(textarea.getAttribute('required'))
-//   if (textarea.value.length > 10){
-//   document.querySelectorAll(`input,textarea`)
-//     .forEach((elem) =>{
-//         elem.value = null
-//     } )}
-//   // console.log(textarea.value)
-// });
