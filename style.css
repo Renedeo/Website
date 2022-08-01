@@ -544,7 +544,9 @@ textarea{
     margin-top:10px ;
 }
 textarea{
-    height: 100px;
+    resize: vertical;
+    min-height: 100px;
+    max-height: 200px;
 }
 input::placeholder,
 textarea::placeholder{
@@ -556,7 +558,7 @@ textarea:placeholder-shown ~ .message_label
 {
     cursor : text;
     top: 30px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 label{
@@ -568,10 +570,7 @@ label{
 input:focus,
 textarea:focus{
     padding-bottom: 6px;
-    font-weight: 700;
     border-width: 3px;
-    /* border-image: linear-gradient(to right, rgb(197, 21, 2), rgb(249, 89, 0)); */
-    /* border-image-slice:  30%; */
 }
 input:focus ~ .mail_label,
 input:focus ~ .name_label,
@@ -581,7 +580,7 @@ textarea:focus ~ .message_label{
     display :block;
     transition: .2s;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 100;
     /* color: rgb(197, 21, 2); */
 
 }

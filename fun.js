@@ -68,17 +68,3 @@ if (spies.length > 0) {
 
 /* ***************************Contact form requirement***************************** */
 
-const btn = document.querySelector('button')
-
-btn.addEventListener("click", 
-  (event) => {
-    let nom = document.getElementById('nom').value
-    let mail = document.getElementById('email').value
-    let message = document.getElementById('message').value
-    console.log(nom)
-    console.log(mail)
-    console.log(message)
-    if (nom.lenght < 0 || mail.lenght < 0 || message.length < 0){
-    }
-    // event.preventDefault()
-})
