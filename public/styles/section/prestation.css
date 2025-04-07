@@ -1,0 +1,13 @@
+#prestations ul{
+    list-style-type: none;
+}
+
+#prestations h2 {
+    color:#FF7961;
+}
+
+#prestations h2,
+#prestations h3 {
+    text-align: center;
+    
+}

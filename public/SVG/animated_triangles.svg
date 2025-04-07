@@ -1,0 +1,174 @@
+
+<svg width="100%" height="100%" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice"
+     xmlns="http://www.w3.org/2000/svg" style="background: none;">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF7961; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4E3A; stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <g>
+    <!-- Generate multiple triangle shapes with animation -->
+    
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="248,35 294,75 284,46">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -11,-12; 0,0"
+                        dur="7.31s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="742,563 715,602 779,600">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; 20,-11; 0,0"
+                        dur="6.78s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="93,23 45,59 133,-1">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -5,19; 0,0"
+                        dur="5.29s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="505,298 551,344 552,331">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -9,17; 0,0"
+                        dur="4.34s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="785,354 802,408 834,343">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -2,-19; 0,0"
+                        dur="5.23s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="135,313 93,342 159,349">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; 20,-2; 0,0"
+                        dur="6.49s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="154,230 161,270 204,225">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; 3,15; 0,0"
+                        dur="7.68s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="785,271 831,313 845,295">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -8,7; 0,0"
+                        dur="4.7s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="337,129 351,187 378,140">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; 1,-14; 0,0"
+                        dur="4.67s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="33,539 64,567 90,565">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; 4,13; 0,0"
+                        dur="7.31s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="245,463 195,513 292,456">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -17,1; 0,0"
+                        dur="4.67s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="23,114 5,163 58,141">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -4,-6; 0,0"
+                        dur="4.49s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="506,215 489,274 528,201">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -20,-2; 0,0"
+                        dur="5.58s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="723,132 673,174 768,98">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -12,14; 0,0"
+                        dur="6.89s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="448,0 423,40 486,27">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; 20,-18; 0,0"
+                        dur="6.72s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="157,111 194,132 210,63">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; 11,-11; 0,0"
+                        dur="4.55s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="141,138 124,196 187,155">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -13,-8; 0,0"
+                        dur="7.98s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="377,164 349,190 411,145">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -1,-17; 0,0"
+                        dur="4.01s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="39,588 6,629 77,604">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; -15,13; 0,0"
+                        dur="6.81s" repeatCount="indefinite"/>
+    </polygon>
+    
+
+    <polygon fill="url(#grad1)" fill-opacity="0.6" stroke="#FF7961" stroke-width="1"
+             points="475,513 450,552 525,540">
+      <animateTransform attributeName="transform" attributeType="XML" type="translate"
+                        values="0,0; 7,15; 0,0"
+                        dur="4.17s" repeatCount="indefinite"/>
+    </polygon>
+    
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+header,
+footer,
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+footer {
+  margin-bottom: 50px;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  /* background-color: #F4F4F4  ; */
+  color: #1e1e1e;
+  background-image: url("../SVG/bg.svg");
+  mix-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+a {
+  color: #ff7961;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff5733;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #cc4426;
+}
+
+a:focus {
+  outline: 2px dashed #ff7961;
+  outline-offset: 2px;
+}
+
+a:visited {
+  color: #b75749;
+}
+
+.svg-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none; /* Pour que ça ne bloque pas les clics */
+    overflow: visible;
+  }
+svg {
+  overflow: visible;
+}
