@@ -4,315 +4,424 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles/nav-bar.css" />
+    <link rel="stylesheet" href="public/styles/banner-text.css" />
+    <link rel="stylesheet" href="public/styles/scroll-bar.css" />
+    <link rel="stylesheet" href="public/styles/experiences.css" />
+    <link rel="stylesheet" href="public/styles/references.css" />
+    <link rel="stylesheet" href="public/styles/expertises.css" />
+    <link rel="stylesheet" href="public/styles/form.css" />
+    <link rel="stylesheet" href="public/styles/global.css" />
+    <link rel="stylesheet" href="public/styles/section/prestation.css" />
+    <link rel="stylesheet" href="public/styles/section/form.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Polygon Consulting</title>
 </head>
 
 <body>
+    <div class="svg-bg">
+        <!-- COLLE LE SVG ICI (sans le `<!doctype html>`) -->
+        <svg width="100%" height="100%" viewBox="0 0 999.512 895.573" preserveAspectRatio="xMidYMid slice"
+            xmlns="http://www.w3.org/2000/svg" style="
+            --transition-duration:5s;
+            background: none;">
+            <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%" spreadMethod="pad">
+                    <stop offset="0" style="stop-color:#FF7961; stop-opacity:1"></stop>
+                    <stop offset="1" style="stop-color:#FF4E3A; stop-opacity:1"></stop>
+                </linearGradient>
+            </defs>
+            <g transform="matrix(1, 0, 0, 1, 14.7787, 13.5471)">
+                <polygon fill="url(#grad1)" stroke="#FF7961" points="548,35 294,75 284,6"
+                    style="stroke-miterlimit: 24.78; stroke-width: 17px; stroke-opacity: 0.12; fill-opacity: 0.3;">
+                    <animateTransform attributeName="transform" type="translate" values="0,0; -11,-12; 0,0" dur="7.31s">
+                    </animateTransform>
+                </polygon>
+                <polygon fill="url(#grad1)" stroke="#FF7961" points="200,100 500,200 200,500"
+                    style="stroke-miterlimit: 24.78; stroke-width: 17px; stroke-opacity: 0.12; fill-opacity: 0.3;">
+                    <animateTransform attributeName="transform" type="translate" values="0,0; -11,-12; 0,0" dur="7.31s">
+                    </animateTransform>
+                </polygon>
+                <polygon fill="url(#grad1)" stroke="#FF7961" points="500,500 800,800 900,0"
+                    style="stroke-miterlimit: 24.78; stroke-width: 17px; stroke-opacity: 0.12; fill-opacity: 0.63;">
+                    <animateTransform attributeName="transform" type="translate" values="0,0; 20,-11; 0,0" dur="6.78s">
+                    </animateTransform>
+                </polygon>
+        </svg>
+    </div>
+
     <header>
         <nav id="nav-bar">
 
-            <p class="logo">
+            <div id="logo">
                 <a href="#" class="navbar-link">Polygon Consulting</a>
-            </p>
-            <input id="nav-toggle" name="nav-toggle" type="checkbox">
-            <ul id="nav-bar-menu">
+            </div>
+            <!-- <input id="nav-toggle" name="nav-toggle" type="checkbox"> -->
+            <ul id="navigation">
+                <!-- Dropdown menu items -->
+                <li id="nav-item-dropdown">
+                    <a href="#prestation" class="navbar-link">Prestations <i class="fa fa-caret-down"></i></a>
 
-                <!-------------------drop menu------------------------------------>
-                <li class="nav-bar-item dropdown">
-                    <a href="#prestation" class="navbar-link"> Prestations
-                        <i class="fa fa-caret-down"></i></a>
-
-                    <ul class="dropdown-menu-content">
-                        <li class="nav-bar-item">
-                            <a href="#analyse" class="dropdown-link ">Analyse </a>
-                        </li>
-                        <li class="nav-bar-item">
-                            <a href="#formation" class="dropdown-link"> Formation</a>
-                        </li>
+                    <ul class="dropdown-menu-content hide">
+                        <li class="dropdown-item"><a href="#analyse" class="dropdown-link">Analyse</a></li>
+                        <li class="dropdown-item"><a href="#formation" class="dropdown-link">Formation</a></li>
                     </ul>
-
                 </li>
-                <!--------------------------------------------------------------->
-                <li class="nav-bar-item">
-
-                    <a href="#realisation" class="navbar-link"> Mon Expérience </a>
-                </li>
-                <li class="nav-bar-item">
-                    <a href="#contact" class="navbar-link"> Contact </a>
-                </li>
-                <!---------------------------------------------------------------->
+                <li class="nav-bar-item"><a href="#realisation" class="navbar-link">Mon expérience</a></li>
+                <li class="nav-bar-item"><a href="#contact" class="navbar-link">Contact</a></li>
             </ul>
-            <label for="nav-toggle" class="icon-burger">
 
+            <!-- Icon when size is convenient to change -->
+            <!-- <label for="nav-toggle" class="icon-burger"> -->
+            <!-- <div class="line"></div>
                 <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </label>
-            <!------------------------------------------------------------------------>
+                <div class="line"></div> -->
+            <!-- </label> -->
         </nav>
     </header>
-    <hr>
-    <section id="acceuil">
-        <div id="presentation" class="data-spy">
-            <h1>Polygon Consulting</h1>
-            <p>Les données de votre site web constituent une source d’information cruciale pour piloter votre activité
-                web.
-                Etudier le comportement et le parcours de vos utilisateurs vous permet d’optimiser votre activité en
-                prenant des
-                décisions basées sur des constatations précises et des données de qualité, et non uniquement sur des
-                croyances
-                infondées. Adopter une stratégie Data Driven vous permet de prendre les bonnes décisions aux bons
-                moments et d’optimiser
-                vos investissements.<br>
-                La web analyse est aujourd’hui un élément clé du marketing digital et de l’optimisation web.
 
-            </p>
-        </div>
-    </section>
-
-    <!------------------------------------------------------------------------>
-    <section id="prestation" class="data-spy">
-        <h1> Nous vous accompagnons ! </h1>
-        <div class="container_prest">
-            <h2>Dans L'<span>ANALYSE</span> de votre performance digitale</h2>
-
-            <div id="analyse">
-                <div class="presta">
-                    <h3>Audit Analytics</h3>
-                    <p>Polygone audite le tracking de votre site, ainsi que toute autre source de données. L’objectif :
-                        s’assurer que vos
-                        données soient adaptées à vos enjeux business & métier.
-                        <br><br>
-                        L’audit permet d’identifier les problèmes de qualité, les fonctionnalités non utilisées ainsi
-                        que les opportunités à
-                        saisir.
-
-                </div>
-                <div class="presta">
-
-                    <h3>Plan de marquage</h3>
-                    <p>Après un audit complet, Polygone vous délivre ses préconisations, adaptées à vos besoins
-                        Analytics.
-                        <br><br>
-                        Le plan de marquage étant le socle de tout outil Analytics / décisionnel.<br><br>
-
-                        Bien construit, il servira également à d’autres outils (remarketing, partenaires etc)
-                    </p>
-                </div>
-                <div class="presta">
-
-                    <h3>Accompagnement</h3>
-                    <p>
-                        Polygone vous accompagne dans votre stratégie Analytics, jusqu’à la construction de dashboard &
-                        le pilotage des parties
-                        prenantes.<br><br>
+    <!-- <hr> -->
+    <main>
+        <section id="banner-text">
+            <div id="banner-presentation" class="data-spy">
+                <h1>Polygon Consulting</h1>
+                <p>
+                    ✨ Et si vos données devenaient vos meilleures alliées ?
+                </p>
+                <p>
+                    Votre site web regorge d’informations précieuses. En comprenant le parcours de vos visiteurs, vous
+                    pouvez améliorer leur expérience, affiner votre stratégie digitale et faire les bons choix, au bon
+                    moment.
+                </p>
+                <p>
+                    🚀 Avec une approche Data Driven, vous gagnez en clarté, en impact et en performance.
+                    <br>
+                    📈 La webanalyse devient alors un vrai levier pour faire grandir votre activité, en toute confiance.
+                </p>
 
 
-                        Cela afin de mieux piloter votre business et adopter une stratégie orientée Data Driven.
-
-                    </p>
-                </div>
             </div>
+        </section>
+
+        <!------------------------------------------------------------------------>
+        <section id="prestations" class="data-spy">
+            <h2>Nous vous accompagnons !</h2>
+
+            <div id="prestation-service">
+                <h3>Dans l’<span>analyse</span> de votre performance digitale</h3>
+
+                <ul id="analyse">
+                    <li class="prestation-items">
+                        <h4>Audit Analytics</h4>
+                        <p>
+                            Polygon audite le tracking de votre site ainsi que toute autre source de données.
+                            L’objectif : s’assurer que vos données sont adaptées à vos enjeux business et métiers.
+                            <br><br>
+                            L’audit permet d’identifier les problèmes de qualité, les fonctionnalités non utilisées,
+                            ainsi que les opportunités à saisir.
+                        </p>
+                    </li>
+
+                    <li class="prestation-items">
+                        <h4>Plan de marquage</h4>
+                        <p>
+                            Après un audit complet, Polygon vous délivre ses préconisations, adaptées à vos besoins
+                            Analytics.
+                            <br><br>
+                            Le plan de marquage constitue le socle de tout outil Analytics ou décisionnel.
+                            <br><br>
+                            S’il est bien construit, il pourra également alimenter d’autres outils (remarketing,
+                            partenaires, etc.).
+                        </p>
+                    </li>
+
+                    <li class="prestation-items">
+                        <h4>Accompagnement</h4>
+                        <p>
+                            Polygon vous accompagne dans votre stratégie Analytics, jusqu’à la construction de
+                            dashboards
+                            et au pilotage des parties prenantes.
+                            <br><br>
+                            L’objectif : mieux piloter votre activité et adopter une stratégie orientée Data Driven.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
             <!------------------------------------------------------------>
-            <h2>La montée en <span>PERFORMANCE</span> de votre équipe</h2>
-            <div id="formation">
-                <div class="prestf">
-                    <h3>Initiation à la web analyse</h3>
-                    <p>WHY ?
-                        Qu’est-ce que la webanalyse ? a quoi peut-elle me servir ? Quels sont les outils ? et par
-                        rapport à mon site ?
-                        <br><br>
-                        HOW ?
-                        Polygone vous propose une initiation en 2 séances, et personnalisé par rapport à votre site et
-                        vos problématiques
+            <h3>La montée en <span>PERFORMANCE</span> de votre équipe</h3>
 
-                </div>
-                <div class="prestf">
-
-                    <h3>Pratique de la webanalyse</h3>
+            <ul id="formations">
+                <li class="formation-items">
+                    <h4>Initiation à la webanalyse</h4>
                     <p>
-                        WHY ?
-                        Comment collecter des données ? Comment recetter un plan de marquage ? Qu’est ce qu’une CM ?
+                        <strong>WHY ?</strong><br>
+                        Qu’est-ce que la webanalyse ? À quoi peut-elle me servir ? Quels sont les outils disponibles ?
+                        Et comment les appliquer à mon site ?
                         <br><br>
-                        HOW ?
-                        Polygone vous propose sur 5 séances sur chacun de ses points pour vous initier ou accompagner
-                        votre perfectionnement.
+                        <strong>HOW ?</strong><br>
+                        Polygon vous propose une initiation en deux séances, personnalisée en fonction de votre site et
+                        de vos problématiques.
+                    </p>
+                </li>
 
-                </div>
-                <div class="prestf">
-
-                    <h3>Google Analytics</h3>
-                    <p>WHY ?
-                        Nouvel outil sur le marché. l’avenir de la WebA, en passe d’être validé par la CNIL
+                <li class="formation-items">
+                    <h4>Pratique de la webanalyse</h4>
+                    <p>
+                        <strong>WHY ?</strong><br>
+                        Comment collecter des données ? Comment recetter un plan de marquage ? Qu’est-ce qu’une Customer
+                        Map ?
                         <br><br>
-                        HOW ?
-                        Polygone vous accompagne en 1 séance dans l’exploration de Google Analytics 4 pour en tirer
-                        pleine puissance
+                        <strong>HOW ?</strong><br>
+                        Polygon vous propose cinq séances dédiées à chacun de ces points pour vous initier ou
+                        accompagner votre montée en compétence.
+                    </p>
+                </li>
 
+                <li class="formation-items">
+                    <h4>Google Analytics</h4>
+                    <p>
+                        <strong>WHY ?</strong><br>
+                        Un outil incontournable du marché : l’avenir de la webanalyse, en passe d’être validé par la
+                        CNIL.
+                        <br><br>
+                        <strong>HOW ?</strong><br>
+                        Polygon vous accompagne en une séance dans l’exploration de Google Analytics 4 pour en tirer
+                        toute la puissance.
+                    </p>
+                </li>
                 </div>
-            </div>
-    </section>
 
-    <!------------------------------------------------------------------------>
+        </section>
 
-    <section id="realisation" class="data-spy">
-        <h1>Mes Expériences </h1>
-        <!------------------------------------------------------------>
+        <!------------------------------------------------------------------------>
 
-        <!-- <div> -->
-        <h3> A propos de moi ... </h3>
-        <div class="container">
-            <div class="apropos">
-                <div class="entete">
-                    <img src="image\photo\amandine.png" alt="phot de profil">
+        <section id="realisation" class="data-spy">
+            <h2>Mes expériences</h2>
+
+            <h3>À propos de moi...</h3>
+            <div id="a-propos">
+                <div id="ACO-profile">
+                    <div id="picture-container">
+                        <img src="public/images/photo/amandine_cropped.png"
+                            alt="Photo de profil de la fondatrice de Polygon Consulting, Amandine Codjo">
+                    </div>
                     <div>
-                        <p>Amandine Codjo <br>
-                            Culture data driven</p>
-                        <div class="deco">Polygon Consulting</div>
+                        <p>Amandine Codjo<br>
+                            Culture data-driven</p>
+                        <div>Polygon Consulting</div>
                     </div>
                 </div>
-                <div class="aproposdemoi">
-                    <p>Amandine est consultante avec plus de 10 années d’expérience dans le digital et en particulier la
-                        valorisation de la
-                        donnée.</p>
 
-                    <p>Son but : <span>faire de la donnée une aide à la décisgoogleion fiable et utilisée !</span>
+                <div class="ACO-description">
+                    <p>Amandine, consultante en data depuis plus de 10 ans, aide les entreprises à transformer la donnée
+                        en levier de décision fiable et concret.
+
+                        Son approche repose sur l’écoute, l’analyse et la rigueur.
+                        <br>
+                        Son credo :
+                        <br>
+                        <em>
+                            La datavisualisation, c’est l’art de faire parler la donnée. À travers le storytelling, elle
+                            révèle l’information qui éclaire les décisions stratégiques et orientées ROI.
+                        </em>
+
+
                     </p>
-                    <p>Pour cela, écoute, analyse et rigueur seront toujours au rendez-vous.</p>
-                    <p><span>Son petit mot :</span><br>La data visualisation est l'art de faire parler la donnée, de lui
-                        faire raconter une histoire. Et, dans ce story
-                        telling, se trouve l’information qui vient initier/appuyer les décisions stratégiques et
-                        ROIstes.</p>
                 </div>
             </div>
+
             <!------------------------------------------------------------>
 
-            <div class="ref">
-                <h3>Ils m'ont fait confiance ...</h3>
-                <div class="reference ref1">
-                    <img src="image\Reference\auchan.jpg" alt="auchan">
-                    <img src="image\Reference\electro depot.png" alt="electro depot">
-                    <img src="image\Reference\oney.jpg" alt="oney">
-                    <img src="image\Reference\Credit Agricole.png" alt="Credit Agricole">
-                    <img src="image\Reference\brice.jpg" alt="brice">
-                    <img src="image\Reference\decathlon.png" alt="decathlon">
-                    <img src="image\Reference\norauto.png" alt="brice">
-                    <img src="image\Reference\Bizbee.jpg" alt="Bizbee">
-                    <img class="pbsize" src="image\Reference\kiabi.jpg" alt="kiabi">
-                    <img src="image\Reference\maggi.png" alt="maggi">
-                    <img src="image\Reference\M6 boutique.png" alt="M6 boutique">
-                    <img src="image\Reference\cofidis.jpg" alt="cofidis">
-                    <img src="image\Reference\nexity.png" alt="hexity">
-                    <img src="image\Reference\bic.jpg" alt="bic">
-                    <img src="image\Reference\bonduelle.jpg" alt="bonduelle">
-                    <img src="image\Reference\eurovent certita.jpg" alt="eurovent certita">
-                    <img src="image\Reference\groupepormona.jpg" alt="groupepormona">
-
-
+            <div id="references">
+                <h2>Ils m'ont fait confiance...</h2>
+                <div id="company">
+                    <ul class="logo-list">
+                        <li><img src="public/images/test/auchan.png"
+                                alt="Auchan logo – French retail group operating hypermarkets and supermarkets worldwide.">
+                        </li>
+                        <li><img src="public/images/test/electro_depot.png"
+                                alt="Electro Dépôt logo – French retailer specializing in electronics and home appliances.">
+                        </li>
+                        <li><img src="public/images/test/oney.png"
+                                alt="Oney logo – French credit company offering consumer credit and financing solutions.">
+                        </li>
+                        <li><img src="public/images/test/Credit_Agricole.png"
+                                alt="Crédit Agricole logo – French banking group providing financial services to individuals and businesses.">
+                        </li>
+                        <li><img src="public/images/test/brice.png"
+                                alt="Brice logo – Fashion brand offering affordable clothing like jackets, shirts, and more.">
+                        </li>
+                        <li><img src="public/images/test/decathlon.png"
+                                alt="Decathlon logo – French multinational retailer specialized in sports equipment and apparel.">
+                        </li>
+                        <li><img src="public/images/test/norauto.png"
+                                alt="Norauto logo – Automotive company offering car maintenance and repair services.">
+                        </li>
+                        <li><img src="public/images/test/Bizbee.png"
+                                alt="Bizzbee logo – Trendy fashion brand for men and women offering modern collections.">
+                        </li>
+                        <li><img class="pbsize" src="public/images/test/kiabi.png"
+                                alt="Kiabi logo – French fashion retailer offering affordable clothing for the whole family.">
+                        </li>
+                        <li><img src="public/images/test/maggi.png"
+                                alt="Maggi logo – Global food brand known for instant noodles, seasonings, and ready-made meals.">
+                        </li>
+                        <li><img src="public/images/test/M6_boutique.png"
+                                alt="M6 Boutique logo – French home shopping channel and online store for fashion, beauty, and household goods.">
+                        </li>
+                        <li><img src="public/images/test/cofidis.png"
+                                alt="Cofidis logo – French financial company specializing in consumer credit and online loans.">
+                        </li>
+                        <li><img src="public/images/test/nexity.png"
+                                alt="Nexity logo – French real estate group providing property development and services.">
+                        </li>
+                        <li><img src="public/images/test/bic.png"
+                                alt="BIC logo – Global brand known for stationery products, lighters, and razors."></li>
+                        <li><img src="public/images/test/bonduelle.png"
+                                alt="Bonduelle logo – French company specialized in canned, frozen, and fresh vegetables.">
+                        </li>
+                        <li><img src="public/images/test/eurovent_certita.png"
+                                alt="Eurovent Certita logo – European certification body for HVAC, refrigeration, and ventilation products.">
+                        </li>
+                        <li><img src="public/images/test/groupepormona.png"
+                                alt="Groupe Pomona logo – French food distributor providing fresh, frozen, and dry products to professionals.">
+                        </li>
+                    </ul>
                 </div>
-                <!-- </div> -->
-                <!------------------------------------------------------------>
-                <!-- <div> -->
-                <h3> Principaux outils </h3>
-                <div class="reference ref2">
-                    <img src="image\Outil\googleanalytic.jpg" alt="">
-                    <img src="image\Outil\googletagmanager.jpg" alt="">
-                    <img src="image\Outil\Google Data Studio.jpg" alt="">
-                    <img src="image\Outil\Adobe aomniture.png" alt="">
-                    <img src="image\Outil\AtInternet.png" alt="">
-                    <img src="image\Outil\excel.jpg" alt="">
-                    <img src="image\Outil\pawerBI.png" alt="">
-                    <img src="image\Outil\Tableau.png" alt="">
-                    <img src="image\Outil\tagassistantgoogle.png" alt="">
-                    <img src="image\Outil\bussinessObject.jpg" alt="">
-                    <img class="pbsize" src="image\Outil\Commanderact.jpg" alt="">
-                    <img class="pbsize" src="image\Outil\Qlik.png" alt="">
+                <h2>Principaux outils</h2>
+                <div id="analytics-tools">
+                    <ul class="tool-list">
+                        <li><img src="public/images/test/tools/googleanalytic.png"
+                                alt="Google Analytics – Tool for data collection and measurement."></li>
+                        <li><img src="public/images/test/tools/googletagmanager.png"
+                                alt="Google Tag Manager – Tool for managing website tags without code."></li>
+                        <li><img src="public/images/test/tools/Google_Data_Studio.png"
+                                alt="Looker Studio (ex-Data Studio) – Data visualization tool for building dashboards.">
+                        </li>
+                        <li><img src="public/images/test/tools/Adobe_aomniture.png"
+                                alt="Adobe Analytics – Tool for measuring, analyzing, and visualizing customer journeys.">
+                        </li>
+                        <li><img src="public/images/test/tools/AtInternet.png"
+                                alt="AT Internet – French analytics solution for tracking user behavior on websites and apps.">
+                        </li>
+                        <li><img src="public/images/test/tools/excel.png"
+                                alt="Microsoft Excel – Spreadsheet application used for data analysis and reporting.">
+                        </li>
+                        <li><img src="public/images/test/tools/pawerBI.png"
+                                alt="Power BI – Microsoft tool for visualizing and analyzing business data."></li>
+                        <li><img src="public/images/test/tools/Tableau.png"
+                                alt="Tableau – Business intelligence platform for interactive dashboards and data exploration.">
+                        </li>
+                        <li><img src="public/images/test/tools/tagassistantgoogle.png"
+                                alt="Google Tag Assistant – Chrome extension to verify and troubleshoot tags."></li>
+                        <li><img src="public/images/test/tools/bussinessObject.png"
+                                alt="SAP BusinessObjects – Platform for reporting, analysis, and data visualization.">
+                        </li>
+                        <li><img src="public/images/test/tools/Commanderact.png"
+                                alt="Commander Act – Tag and consent management platform for digital marketing."></li>
+                        <li><img src="public/images/test/tools/Qlik.png"
+                                alt="Qlik – Business intelligence tool offering data analysis and visualization capabilities.">
+                        </li>
+                    </ul>
                 </div>
-                <div class="expertise">
 
-                    <div class="container_expert">
 
-                        <div class="expert">
-                            <h3>Expertise</h3>
-                            <div class="ref3">
-                                <figure role="figure">
-                                    <img src="image\expertise\audiperf.png" alt="audit performance">
-                                    <figcaption>
-                                        Audit Performance
-                                    </figcaption>
-                                </figure>
-                                <figure role="figure">
-                                    <img src="image\expertise\analysedonneemulticanal.png"
-                                        alt="analyse de donnee multi-canal">
-                                    <figcaption>
-                                        Analyse de donnée multi-canal
-                                    </figcaption>
-                                </figure>
-                                <figure role="figure">
-                                    <img src="image\expertise\datavisualisation.png "
-                                        alt="datavisualisation et conseil">
-                                    <figcaption>
-                                        Datavisualisation et Conseil
-                                    </figcaption>
-                                </figure>
-                                <figure role="figure">
-                                    <img src="image\expertise\workshop.png " alt="workshop">
-                                    <figcaption>
-                                        Workshop
-                                    </figcaption>
-                                </figure>
-                            </div>
+            </div>
 
-                        </div>
-                        <d    iv class="plus">
+            <section id="Expertise">
+
+                <div class="expert">
+                    <h2>Expertise</h2>
+                    <ul class="ref3">
+                        <li>
+                            <figure role="figure">
+                                <img src="public/images/expertise/audiperf.png"
+                                    alt="Illustration of a web analytics performance audit, showing website speed, SEO factors, and user behavior insights.">
+                                <figcaption>
+                                    Audit de performance
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure role="figure">
+                                <img src="public/images/expertise/analysedonneemulticanal.png"
+                                    alt="Visualization of multichannel analytics integrating data from various platforms to monitor performance and user behavior.">
+                                <figcaption>
+                                    Analyse de données multicanal
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure role="figure">
+                                <img src="public/images/expertise/datavisualisation.png"
+                                    alt="Data visualization chart using graphs, diagrams, and interactive dashboards to simplify complex information.">
+                                <figcaption>
+                                    DataViz et conseil
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure role="figure">
+                                <img src="public/images/expertise/workshop.png"
+                                    alt="Professional workshop with group discussions and collaborative learning activities.">
+                                <figcaption>
+                                    Workshop
+                                </figcaption>
+                            </figure>
+                        </li>
+                        <li class="plus">
                             <h3>Et aussi</h3>
-                            <p>Do it Yourself Addict
-                                <br>
-                                Boxe and running
-                                <br>
-                                Feel Good reader
+                            <p>
+                                Do it Yourself addict<br>
+                                Boxe & running<br>
+                                Feel good reader
                             </p>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
+
+
+            </section>
+
+            </div>
             </div>
 
             <!------------------------------------------------------------>
-    </section>
+        </section>
 
+    </main>
     <footer id="contact" class="data-spy">
-        <h1>Nous Contacter</h1>
-        <div>
-            <form action="https://formsubmit.co/a098afa808a7bdcbee43d8aab8886f5e" method="POST">
-                
-                <div class="info-perso">
-                    <div class="info-nom">
-                        <input type="text" name="name" placeholder="Nom" id="nom" required>
-                        <label for="name" class="name_label">Nom:</label>
-                    </div>
-                    <div class="info-mail">
-                        <input type="email" name="email" placeholder="example@gmail.com" id="email" required>
-                        <label for="email" class="mail_label">Mail:</label>
-                    </div>
+        <h2>Plus d'informations</h2>
+        <form action="https://formsubmit.co/a098afa808a7bdcbee43d8aab8886f5e" method="POST">
+            <fieldset>
+                <legend>Nous contacter</legend>
+                <div class="info-nom">
+                    <label for="nom" class="name_label">Nom :</label>
+                    <input type="text" name="name" placeholder="Nom" id="nom" required>
                 </div>
-                
-                <div class="info">
-                    <textarea type="message" name="message" placeholder="Message ..." id="message" required></textarea>
-                    <label for="message" class="message_label">Message</label>
+                <div class="info-mail">
+                    <label for="email" class="mail_label">Email :</label>
+                    <input type="email" name="email" placeholder="exemple@gmail.com" id="email" required>
                 </div>
-                
-                <div class="info">
-                    <button type="submit">Envoyer</button>
-                </div>
-            </form>
 
+                <div class="info">
+                    <label for="message" class="message_label">Message :</label>
+                    <textarea name="message" placeholder="Votre message..." id="message" required></textarea>
+                </div>
+            </fieldset>
 
+            <div class="info">
+                <button type="submit">Envoyer</button>
+            </div>
+
+        </form>
     </footer>
-    <script type="text/javascript" src="fun.js"></script>
+
+    <!-- <script type="text/javascript" src="fun.js"></script> -->
+
 </body>
 
 
