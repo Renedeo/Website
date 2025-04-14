@@ -4,6 +4,8 @@
   --text-size-min: 20px;
   --text-size-prefered: 2vw;
   --text-size-max: 40px;
+  --color-accent: #ffb347;
+
   font-size: clamp(
     var(--text-size-min),
     var(--text-size-prefered),
@@ -13,7 +15,7 @@
 
 #header-banner {
   text-align: center;
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
 }
 
 header > nav > ul {
@@ -21,50 +23,70 @@ header > nav > ul {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 0;
-  background-color: blue;
-  color: white;
+  /* background-color: blue; */
+  /* color: white; */
 }
 
 header > nav > ul > li {
-  background-color: red;
-  width: auto;
+  /* background-color: red; */
+  /* width: auto; */
 }
 
 header > nav > ul > li#logo {
-  flex-grow: 1;
-  padding-right: 15%;
+  /* flex-grow: 1; */
+  /* padding-right: 15%; */
   text-align: center;
-  width: 65%;
-  background-color: aqua;
+  /* width: 65%; */
+  /* background-color: aqua; */
 }
 
 header > nav > ul > li#items > ul {
   list-style: none;
+  width: 200px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  gap: 5%;
-  padding: 0 10px;
-  background-color: brown;
+  padding: 10px;
+  /* background-color: brown; */
+}
+header > nav > ul > li#items > ul > li > a.navbar-link img {
+  width: 25px;
+  height: auto;
+}
+header > nav > ul > li#items > ul > li#contact {
+  background-color: var(--color-accent) ;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10%;
 }
 
 main > section#banner {
-  height: 200px;
+  height: 300px;
   width: 100%;
-  background-color: var(--color-background);
+  max-width: 2000px;
+  margin: 0 auto;
+  /* background-color: var(--color-background); */
   position: relative;
   overflow: hidden;
+  margin-bottom: 25px;
 }
 main > section#banner > hgroup {
   position: absolute;
   padding: 10px;
   bottom: 0;
   right: 0;
+  width: 50%;
+}
+main > section#banner > hgroup > p {
+  /* width: 50%; */
 }
 main > section#banner > hgroup > h1,
 main > section#banner > hgroup > p {
   margin: 0;
+  text-align: right;
+  /* width: 20%; */
 }
 main > section#banner > div#imgroup {
   display: grid;
@@ -75,75 +97,132 @@ main > section#banner > div#imgroup {
   overflow-y: hidden;
   scroll-behavior: smooth;
 }
+main > section#banner > div#imgroup::-webkit-scrollbar {
+  display: none;
+
+}
 main > section#banner > div#imgroup > div.imgplaceholder {
-  background-color: red;
+  /* background-color: red; */
   width: 150px;
 }
+
 
 main > section#greeting {
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
   flex-wrap: wrap;
-  width: 75%;
-  margin: 0 auto;
-  background-color: var(--color-background);
+  width: 100%;
+  /* margin: 0 auto; */
+  /* background-color: var(--color-background); */
 }
 
 main > section#greeting > div#image-container {
-  width: 300px;
-  height: 350px;
-  margin: 0 auto;
-  background-color: red;
+  /* width: 300px; */
+  /* height: 350px; */
+  /* margin: 0 auto; */
+  width: 40%;
+  /* background-color: red; */
+}
+main > section#greeting > div#image-container img{
+  width: 100%;
+  min-width: 400px;
+  height: auto;
+  /* margin: 0 auto; */
+  box-shadow: 10px 10px 10px var(--color-background);
+  /* background-color: red; */
 }
 
 main > section#greeting > div#text-container {
   flex-grow: 1;
-  width: 100px;
+  min-width: 400px;
+  width: 10%;
+  max-width: 500px;
   height: 100%;
-  text-align: center;
+  /* text-align: center; */
+}
+main > section#greeting > div#text-container > p {
+  margin: 40px;
 }
 
 main > section#greeting > div#text-container > p#greet {
+  font-size: larger;
 }
 main > section#greeting > div#text-container > p.text {
 }
 main > section#greeting > div#text-container > p#credo {
+  font-size: 1rem;
+
 }
 
 main > section#services {
-  background-color: #9c5e3f;
+  /* background-color: #9c5e3f; */
 }
-main > section#services > div.Stitle,
-main > section#references > div.Stitle {
+main > section#services > h2,
+main > section#references > h2 {
   text-align: center;
   padding: 10px 0;
   border-top: 2px solid var(--color-primary);
   border-bottom: 2px solid var(--color-primary);
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
 }
 
 main > section#services > div#items {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
-  text-align: center;
+  gap: 60px;
+  /* text-align: center; */
 }
 
 main > section#services > div#items > div.item {
+  display: flex;
+  flex-direction: column;
   width: 30vw;
-  max-width: 300px;
-  background-color: var(--color-background);
+  max-width: 400px;
+  /* background-color: var(--color-background); */
 }
-main > section#services > div#items > div.item > p.text {
-  background-color: beige;
-  height: 200px;
-  font-size: 0.75rem;
+
+
+main > section#services > div#items > div.item > ul.text {
+  /* background-color: beige; */
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+}
+main > section#services > div#items > div.item > ul.text > li {
+  margin: 10px 0;
+}
+main > section#services > div#items > div.item > h3 {
+  text-align: center;
+  position: relative;
+  height: 150px;
+}
+@media (min-width:1542px) {
+  main > section#services > div#items > div.item > h3{
+    height: 200px; 
+  }
+}
+main > section#services > div#items > div.item > h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+  height: 10px;
+  background-color: black;
+  box-shadow: 10px 10px 20px var(--color-primary);
+}
+main > section#services > div#items > div.item > h3 > span{
+  color: #af782a;
 }
 
 main > section#services > div#items > div.item > p.service-item {
   font-size: 1.3rem;
-  background-color: red;
+  text-align: center;
+  letter-spacing: 5px;
+  text-shadow: 10px 10px 10px;
+  /* background-color: red; */
 }
 
 main > section#references > div#items {
