@@ -23,7 +23,7 @@
                     <ul id="nav-bar-items">
                         <li><a href="" class="navbar-link"><i><img src="public/SVG/linkedin-color-svgrepo-com.svg"
                                         alt=""></i></a></li>
-                        <li id="contact">Contact</li>
+                        <li id="contact"><a href="">Contact</a></li>
                     </ul>
                     </div>
                 </li>
@@ -32,7 +32,7 @@
     </header>
     <main>
         <section id="banner">
-            <hgroup>
+            <hgroup class="animate-on-visible">
                 <h1>Analytics Insights</h1>
                 <p><em>De la collecte jusqu’à l’analyse, je transforme vos indicateurs en leviers d’action concrets pour
                         booster vos performances digitales.</em></p>
@@ -48,7 +48,7 @@
                 <img src="public/images/photo/amandine.jpeg"
                     alt="Photo de profil de la fondatrice de Polygon Consulting, Amandine Codjo">
             </div>
-            <div id="text-container">
+            <div id="text-container" class="animate-on-visible">
                 <p id="greet">Bonjour,</p>
 
                 <p class="text">Je suis Amandine CODJO, Experte en Digital Analytics avec 14 ans d’expérience dans
@@ -72,10 +72,14 @@
         </section>
 
         <section id="services">
-            <h2>Mes Services</h2>
+            <h2>MES SERVICES</h2>
             <div id="items">
                 <div class="item">
-                    <h3><span>5</span> jours pour expertiser votre structure analytics</h3>
+                    <div>
+
+                        <h3><span>5</span> jours pour expertiser votre structure analytics</h3>
+                        <img src="public/SVG/services/book-expert-guru-svgrepo-com.svg" alt="">
+                    </div>
                     <ul class="text">
                         <li>Implémentation VS plan de tracking</li>
                         <li>Qualité & intégrité de la collecte</li>
@@ -86,7 +90,12 @@
                     <p class="service-item">AUDIT</p>
                 </div>
                 <div class="item">
-                    <h3><span>5</span> dashboards pour suivre efficacement votre activité</h3>
+                    <div>
+                        <h3><span>5</span> dashboards pour suivre efficacement votre activité</h3>
+                        <img src="public/SVG/services/knowledge-graph-dashboard-svgrepo-com.svg" alt="">
+
+                    </div>
+
                     <ul class="text">
                         <li>Dashboard de pilotage</li>
                         <li>Sources de trafic & performance</li>
@@ -97,7 +106,10 @@
                     <p class="service-item">Starter PACK</p>
                 </div>
                 <div class="item">
-                    <h3><span>5</span> analyses ciblées, avec des pistes concrètes</h3>
+                    <div>
+                        <h3><span>5</span> analyses ciblées, avec des pistes concrètes</h3>
+                        <img src="public/SVG/services/analyse-svgrepo-com.svg" alt="">
+                    </div>
                     <ul class="text">
                         <li>Pourquoi vos conversions stagnent ?</li>
                         <li>Quels sont les leviers les + rentables ?</li>
@@ -108,7 +120,10 @@
                     <p class="service-item">INSIGHTS</p>
                 </div>
                 <div class="item">
-                    <h3><span>5</span> modules personnalisés pour progresser</h3>
+                    <div>
+                        <h3><span>5</span> modules personnalisés pour progresser</h3>
+                        <img src="public/SVG/services/training-center-svgrepo-com.svg" alt="">
+                    </div>
                     <ul class="text">
                         <li>Concepts clés de l’analyse web</li>
                         <li>Plan de tracking orienté business</li>
@@ -122,7 +137,7 @@
         </section>
 
         <section id="references">
-            <h2>Mes références</h2>
+            <h2>MES RÉFÉRENCES</h2>
             <div id="items">
                 <div class="item">
                     <div class="graph">graph</div>
@@ -176,11 +191,13 @@
                     <label for="message">Message :</label>
                     <textarea name="message" id="message"></textarea>
                 </div>
+                <button type="submit">Envoyer</button>
             </fieldset>
         </form>
         <div id="CR">Copyright Renedeo</div>
     </footer>
 
+    <script src="public/javascript/script.js"></script>
 </body>
 
 </html>

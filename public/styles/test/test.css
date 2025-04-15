@@ -3,7 +3,7 @@
   --color-background: #d7b089;
   --text-size-min: 20px;
   --text-size-prefered: 2vw;
-  --text-size-max: 40px;
+  --text-size-max: 30px;
   --color-accent: #ffb347;
 
   font-size: clamp(
@@ -13,64 +13,102 @@
   );
 }
 
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: rgb(250, 235, 215);
+  margin: 0 0 50px 0;
+}
+
+p {
+  margin: 0;
+}
+h3,
+img,
+div,
+hgroup {
+  z-index: -1;
+}
+
+section {
+  margin: 20px auto;
+}
+
+section:nth-child(2) {
+  margin-top: 50px;
+}
+
 #header-banner {
   text-align: center;
   /* background-color: var(--color-primary); */
 }
-
 header > nav > ul {
   list-style: none;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 3vw;
   padding: 0;
+  width: 50vw;
+  max-width: 1500px;
+  margin: 0 auto;
   /* background-color: blue; */
   /* color: white; */
 }
-
 header > nav > ul > li {
   /* background-color: red; */
   /* width: auto; */
 }
 
 header > nav > ul > li#logo {
-  /* flex-grow: 1; */
-  /* padding-right: 15%; */
+  flex-grow: 1;
   text-align: center;
-  /* width: 65%; */
-  /* background-color: aqua; */
+  font-size: 1.8rem;
+}
+@media (max-width: 1386px) {
+  header > nav > ul {
+    justify-content: space-between;
+    width: unset;
+    padding: 0 10%;
+  }
+  header > nav > ul > li#logo {
+    flex-grow: unset;
+  }
 }
 
 header > nav > ul > li#items > ul {
   list-style: none;
   width: 200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 3vw;
   padding: 10px;
   /* background-color: brown; */
 }
 header > nav > ul > li#items > ul > li > a.navbar-link img {
-  width: 25px;
+  width: 3vw;
+  max-width: 100px;
   height: auto;
 }
 header > nav > ul > li#items > ul > li#contact {
-  background-color: var(--color-accent) ;
+  background-color: var(--color-accent);
   padding: 10px 20px;
   border: none;
   border-radius: 10%;
+  font-size: 1.5rem;
 }
 
 main > section#banner {
   height: 300px;
   width: 100%;
   max-width: 2000px;
-  margin: 0 auto;
-  /* background-color: var(--color-background); */
+  margin: 150px auto 50px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 25px;
 }
 main > section#banner > hgroup {
   position: absolute;
@@ -99,34 +137,25 @@ main > section#banner > div#imgroup {
 }
 main > section#banner > div#imgroup::-webkit-scrollbar {
   display: none;
-
 }
 main > section#banner > div#imgroup > div.imgplaceholder {
   /* background-color: red; */
   width: 150px;
 }
 
-
 main > section#greeting {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   flex-wrap: wrap;
+  /* gap: 10vw; */
   width: 100%;
-  /* margin: 0 auto; */
-  /* background-color: var(--color-background); */
 }
 
-main > section#greeting > div#image-container {
-  /* width: 300px; */
-  /* height: 350px; */
-  /* margin: 0 auto; */
-  width: 40%;
-  /* background-color: red; */
-}
-main > section#greeting > div#image-container img{
-  width: 100%;
+main > section#greeting > div#image-container img {
+  width: 40vw;
   min-width: 400px;
+  max-width: 600px;
   height: auto;
   /* margin: 0 auto; */
   box-shadow: 10px 10px 10px var(--color-background);
@@ -135,35 +164,41 @@ main > section#greeting > div#image-container img{
 
 main > section#greeting > div#text-container {
   flex-grow: 1;
-  min-width: 400px;
-  width: 10%;
-  max-width: 500px;
+  min-width: 500px;
+  width: 20%;
+  max-width: 900px;
   height: 100%;
+  opacity: 0;
   /* text-align: center; */
 }
 main > section#greeting > div#text-container > p {
   margin: 40px;
+  font-size: clamp(1.2em, 3vw, 1.5em);
+}
+
+.appear {
+  animation: appear 0.8s ease-out forwards;
 }
 
 main > section#greeting > div#text-container > p#greet {
-  font-size: larger;
+  font-size: 2rem;
 }
 main > section#greeting > div#text-container > p.text {
+  padding-left: 5vw;
 }
 main > section#greeting > div#text-container > p#credo {
   font-size: 1rem;
-
+  padding-left: 10vw;
 }
 
-main > section#services {
-  /* background-color: #9c5e3f; */
-}
 main > section#services > h2,
 main > section#references > h2 {
   text-align: center;
   padding: 10px 0;
-  border-top: 2px solid var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
+  font-size: 3rem;
+  margin-bottom: 50px;
+  /* border-top: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary); */
   /* background-color: var(--color-background); */
 }
 
@@ -179,10 +214,10 @@ main > section#services > div#items > div.item {
   display: flex;
   flex-direction: column;
   width: 30vw;
-  max-width: 400px;
+  min-width: 300px;
+  max-width: 600px;
   /* background-color: var(--color-background); */
 }
-
 
 main > section#services > div#items > div.item > ul.text {
   /* background-color: beige; */
@@ -192,18 +227,85 @@ main > section#services > div#items > div.item > ul.text {
 }
 main > section#services > div#items > div.item > ul.text > li {
   margin: 10px 0;
+  font-size: clamp(1em, 3vw, 1.2em);
 }
-main > section#services > div#items > div.item > h3 {
+main > section#services > div#items > div.item > div {
+  position: relative;
+}
+main > section#services > div#items > div.item > div > img {
+  position: absolute;
+  width: 3vw;
+  min-width: 30px;
+  max-width: 40px;
+  bottom: 0;
+  right: 0;
+  background-color: var(--color-background);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+main > section#services > div#items > div.item > div > h3 {
   text-align: center;
   position: relative;
-  height: 150px;
+  font-size: clamp(25px, 3vw, 40px);
+  padding-bottom: 50px;
+  transition: all 0.5s ease-in-out;
 }
-@media (min-width:1542px) {
-  main > section#services > div#items > div.item > h3{
-    height: 200px; 
+@media (min-width: 1078px) {
+  main > section#services > div#items > div.item > div > h3 {
+    height: 100px;
+  }
+  main > section#services > div#items > div.item > ul.text > li {
+    font-size: clamp(.8em, 3vw, 0.9em);
+    padding-left: 2vw;
+  }
+  main > section#services > div#items > div.item {
+    width: 49%;
+  }
+  @media (min-width: 1262px) {
+    main > section#services > div#items > div.item > div > h3 {
+      /* height: 100px; */
+    }
+    main > section#services > div#items > div.item {
+      /* width: 20%; */
+    }
+    main > section#services > div#items > div.item > ul.text > li {
+      font-size: 0.8em;
+      padding-left: 5vw;
+    }
   }
 }
-main > section#services > div#items > div.item > h3::after {
+
+@media (min-width: 1364px) {
+  main > section#services > div#items > div.item > div > h3 {
+    font-size: clamp(25px, 3vw, 40px);
+  }
+}
+
+@media (max-width: 1078px) {
+  main > section#services > div#items > div.item > div > h3 {
+    height: 100px;
+  }
+  @media (max-width: 971px) {
+    /* main > section#services > div#items > div.item > div > h3 {
+      height: 100px;
+      } */
+      main > section#services > div#items > div.item:nth-child(3) > div > h3, 
+      main > section#services > div#items > div.item:nth-child(4) > div > h3 
+      {
+        height: 50px;
+      }
+      @media (max-width: 863px) {
+        
+        main > section#services > div#items > div.item > div > h3 
+        {
+          height: 50px;
+        }
+      }
+  }
+}
+
+main > section#services > div#items > div.item > div > h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -213,86 +315,171 @@ main > section#services > div#items > div.item > h3::after {
   background-color: black;
   box-shadow: 10px 10px 20px var(--color-primary);
 }
-main > section#services > div#items > div.item > h3 > span{
+main > section#services > div#items > div.item > div > h3 > span {
   color: #af782a;
 }
 
 main > section#services > div#items > div.item > p.service-item {
-  font-size: 1.3rem;
+  font-size: clamp(40px, 3vw, 55px);
   text-align: center;
   letter-spacing: 5px;
-  text-shadow: 10px 10px 10px;
+  text-shadow: 0px 40px 10px var(--color-background);
   /* background-color: red; */
 }
 
+main > section#references {
+  /* min-height: 900px; */
+  padding-bottom: 100px;
+}
 main > section#references > div#items {
   display: flex;
-  gap: 3%;
-  color: white;
-  height: 200px;
-  background-color: black;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* color: white; */
+  gap: 10%;
+  height: 100%;
+  /* background-color: black; */
 }
 main > section#references > div#items > div.item {
-  width: 49%;
   position: relative;
+  width: 600px;
+  height: 500px;
 }
+@media (max-width: 714px) {
+  main > section#references > div#items > div.item {
+    width: 100%;
+  }
+}
+
 main > section#references > div#items > div.item > div.imglist {
   position: absolute;
-  width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  /* width: 100%; */
   background-color: antiquewhite;
   display: flex;
   justify-content: end;
+  align-items: center;
   bottom: 10%;
   right: 0;
+  left: 0;
+  height: 10%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none; /* Firefox */
+}
+main
+  > section#references
+  > div#items
+  > div.item
+  > div.imglist::-webkit-scrollbar {
+  display: none;
 }
 main > section#references > div#items > div.item > div.imglist > div.img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
-  background-color: red;
+  /* background-color: red; */
+  width: auto;
+  height: fit-content;
 }
 
 footer {
-  /* height: 200px; */
-  background-color: #9c5e3f;
+  /* background-color: #9c5e3f; */
   display: flex;
   justify-content: space-around;
   align-items: end;
   flex-wrap: wrap;
+  height: 800px;
+  max-width: 2500px;
+  margin: 0 auto;
 }
 
 footer > div#footer-logo {
-  /* width: 400px; */
+  /* width: 100%; */
+  text-align: left;
 }
 
 footer > form {
   width: 45%;
-  max-width: 500px;
+  height: 60%;
   text-align: end;
 }
+@media (max-width: 1025px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer > form {
+    width: 100%;
+    max-width: 100%;
+  }
+  footer > div#footer-logo {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+footer > form > fieldset {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+footer > form > fieldset > div:nth-child(2),
+footer > form > fieldset > div:nth-child(3) {
+  /* background-color: red; */
+  height: 13%;
+  min-height: 100px;
+  margin-bottom: 2%;
+}
+footer > form > fieldset > div > input {
+  width: 70%;
+  height: 100%;
+}
 footer > form > fieldset > div:nth-child(4) {
+  height: 69%;
+  display: block;
   text-align: left;
 }
 footer > form > fieldset > div:nth-child(4) > textarea#message {
   width: 100%;
-  background-color: red;
+  resize: vertical;
+  height: 100%;
+  max-height: 70%;
 }
-
+footer > form > fieldset > button {
+  background-color: #af782a;
+  width: 20%;
+  min-width: 100px;
+  max-width: 200px;
+  padding: 2%;
+  font-size: 0.8em;
+  margin: 0 auto;
+}
 footer > div#CR {
   width: 100%;
   text-align: right;
 }
 
-p {
-  margin: 0;
+.animation-on-visible {
+  opacity: 0;
+}
+.visible {
+  animation: appear 0.8s ease-in-out;
+}
+div#text-container.visible {
+  animation-delay: 0.5s;
 }
 
-section {
-  margin-top: 25px;
-}
-
-section#banner {
-  padding-bottom: 1px;
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
