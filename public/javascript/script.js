@@ -17,8 +17,9 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.5 }
 );
-document.querySelectorAll(".animate-on-visible").forEach((el) => {
+[...$(".animate-on-visible")].forEach((el) => {
   observer.observe(el);
 });
 
 /** form */
+

@@ -19,7 +19,7 @@
         <nav>
             <ul>
                 <li id="logo">Amandine CODJO</li>
-                <li id="items">
+                <li class="items">
                     <ul id="nav-bar-items">
                         <li><a href="" class="navbar-link"><i><img src="public/SVG/linkedin-color-svgrepo-com.svg"
                                         alt=""></i></a></li>
@@ -38,9 +38,9 @@
                         booster vos performances digitales.</em></p>
             </hgroup>
             <div id="imgroup">
-                <div class="imgplaceholder">img</div>
-                <div class="imgplaceholder">img</div>
-                <div class="imgplaceholder">img</div>
+                <img src="public/SVG/tools/piano.svg" class="imgplaceholder">
+                <img src="public/SVG/tools/google_analytics-horizontal.svg" class="imgplaceholder">
+                <img src="public/SVG/tools/adobe-analytics-vector-logo-seeklogo/adobe-analytics-seeklogo.svg" class="imgplaceholder">
             </div>
         </section>
         <section id="greeting">
@@ -73,7 +73,7 @@
 
         <section id="services">
             <h2>MES SERVICES</h2>
-            <div id="items">
+            <div class="items">
                 <div class="item">
                     <div>
 
@@ -138,7 +138,7 @@
 
         <section id="references">
             <h2>MES RÉFÉRENCES</h2>
-            <div id="items">
+            <div class="items">
                 <div class="item">
                     <div class="graph">graph</div>
                     <div class="imglist">
@@ -174,29 +174,37 @@
     <footer>
         <div id="footer-logo">
             <p>Amandine CODJO</p>
-            <p id="skills">Some skills</p>
+            <p id="skills">Experte Digital Performance Analyse – GA4 – Piano – Adobe</p>
+            <p>Analytics Insights</p>
         </div>
-        <form action="">
+        <form id="contact-form">
             <fieldset>
-                <legend>Me Contacter</legend>
-                <div>
-                    <label for="name">Name: </label>
-                    <input id="name" name="name" type="text" required>
-                </div>
-                <div>
-                    <label for="email">Email: </label>
-                    <input id="email" name="email" type="email" required>
-                </div>
-                <div>
-                    <label for="message">Message :</label>
-                    <textarea name="message" id="message"></textarea>
-                </div>
-                <button type="submit">Envoyer</button>
+              <legend>Me Contacter</legend>
+          
+              <div>
+                <label for="name">Name: </label>
+                <input id="name" name="name" type="text" required>
+              </div>
+          
+              <div>
+                <label for="email">Email: </label>
+                <input id="email" name="email" type="email" required>
+              </div>
+          
+              <div>
+                <label for="message">Message :</label>
+                <textarea name="message" id="message" required></textarea>
+              </div>
+          
+              <button type="submit" id="send-btn">Envoyer</button>
+              <div id="response"></div>
             </fieldset>
-        </form>
+          </form>
+          
         <div id="CR">Copyright Renedeo</div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="public/javascript/script.js"></script>
 </body>
 

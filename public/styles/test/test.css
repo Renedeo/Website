@@ -1,10 +1,10 @@
 :root {
   --color-primary: #9c5e3f;
   --color-background: #d7b089;
-  --text-size-min: 20px;
-  --text-size-prefered: 2vw;
+  --text-size-min: 16px;
+  --text-size-prefered: 4vw;
   --text-size-max: 30px;
-  --color-accent: #ffb347;
+  --color-accent: #B07E65;
 
   font-size: clamp(
     var(--text-size-min),
@@ -12,6 +12,7 @@
     var(--text-size-max)
   );
 }
+
 
 header {
   position: fixed;
@@ -25,6 +26,12 @@ header {
 p {
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+}
+
+
 h3,
 img,
 div,
@@ -33,7 +40,7 @@ hgroup {
 }
 
 section {
-  margin: 20px auto;
+  margin: 10% auto;
 }
 
 section:nth-child(2) {
@@ -66,7 +73,7 @@ header > nav > ul > li {
 header > nav > ul > li#logo {
   flex-grow: 1;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: clamp(1.1rem, 3vw, 2rem);
 }
 @media (max-width: 1386px) {
   header > nav > ul {
@@ -79,7 +86,7 @@ header > nav > ul > li#logo {
   }
 }
 
-header > nav > ul > li#items > ul {
+header > nav > ul > li.items > ul {
   list-style: none;
   width: 200px;
   display: flex;
@@ -89,27 +96,30 @@ header > nav > ul > li#items > ul {
   padding: 10px;
   /* background-color: brown; */
 }
-header > nav > ul > li#items > ul > li > a.navbar-link img {
+header > nav > ul > li.items > ul > li > a.navbar-link img {
   width: 3vw;
   max-width: 100px;
   height: auto;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
-header > nav > ul > li#items > ul > li#contact {
+header > nav > ul > li.items > ul > li#contact {
   background-color: var(--color-accent);
   padding: 10px 20px;
   border: none;
   border-radius: 10%;
-  font-size: 1.5rem;
 }
 
 main > section#banner {
   height: 300px;
   width: 100%;
-  max-width: 2000px;
+  max-width: 1500px;
   margin: 150px auto 50px;
   position: relative;
   overflow: hidden;
 }
+
 main > section#banner > hgroup {
   position: absolute;
   padding: 10px;
@@ -117,6 +127,7 @@ main > section#banner > hgroup {
   right: 0;
   width: 50%;
 }
+
 main > section#banner > hgroup > p {
   /* width: 50%; */
 }
@@ -127,13 +138,40 @@ main > section#banner > hgroup > p {
   /* width: 20%; */
 }
 main > section#banner > div#imgroup {
-  display: grid;
+  --image-size:30%;
+  /* display: grid;
   grid-auto-flow: column;
-  grid-template-rows: repeat(1, 150px);
+  grid-template-rows: repeat(1, var(--image-size));
   grid-auto-columns: auto;
+  place-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  row-gap: 50px;
+  
+}
+@media (max-width:500px) {
+  main > section#banner > hgroup {
+    width: 100%;
+    position: unset;
+    padding:unset;
+  }
+  main > section#banner > div#imgroup {
+    justify-content: end;
+    row-gap: 20px;
+  }
+  main > section#banner > div#imgroup > img {
+    flex-grow: 1;
+  }
+  
+}
+main > section#banner > div#imgroup >img {
+  width: var(--image-size);
+  height: auto;
 }
 main > section#banner > div#imgroup::-webkit-scrollbar {
   display: none;
@@ -202,7 +240,7 @@ main > section#references > h2 {
   /* background-color: var(--color-background); */
 }
 
-main > section#services > div#items {
+main > section#services > div.items {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -210,7 +248,7 @@ main > section#services > div#items {
   /* text-align: center; */
 }
 
-main > section#services > div#items > div.item {
+main > section#services > div.items > div.item {
   display: flex;
   flex-direction: column;
   width: 30vw;
@@ -219,20 +257,20 @@ main > section#services > div#items > div.item {
   /* background-color: var(--color-background); */
 }
 
-main > section#services > div#items > div.item > ul.text {
+main > section#services > div.items > div.item > ul.text {
   /* background-color: beige; */
   list-style: none;
   padding: 0;
   flex-grow: 1;
 }
-main > section#services > div#items > div.item > ul.text > li {
+main > section#services > div.items > div.item > ul.text > li {
   margin: 10px 0;
   font-size: clamp(1em, 3vw, 1.2em);
 }
-main > section#services > div#items > div.item > div {
+main > section#services > div.items > div.item > div {
   position: relative;
 }
-main > section#services > div#items > div.item > div > img {
+main > section#services > div.items > div.item > div > img {
   position: absolute;
   width: 3vw;
   min-width: 30px;
@@ -244,7 +282,7 @@ main > section#services > div#items > div.item > div > img {
   border: none;
   border-radius: 10px;
 }
-main > section#services > div#items > div.item > div > h3 {
+main > section#services > div.items > div.item > div > h3 {
   text-align: center;
   position: relative;
   font-size: clamp(25px, 3vw, 40px);
@@ -252,24 +290,18 @@ main > section#services > div#items > div.item > div > h3 {
   transition: all 0.5s ease-in-out;
 }
 @media (min-width: 1078px) {
-  main > section#services > div#items > div.item > div > h3 {
+  main > section#services > div.items > div.item > div > h3 {
     height: 100px;
   }
-  main > section#services > div#items > div.item > ul.text > li {
+  main > section#services > div.items > div.item > ul.text > li {
     font-size: clamp(.8em, 3vw, 0.9em);
     padding-left: 2vw;
   }
-  main > section#services > div#items > div.item {
+  main > section#services > div.items > div.item {
     width: 49%;
   }
   @media (min-width: 1262px) {
-    main > section#services > div#items > div.item > div > h3 {
-      /* height: 100px; */
-    }
-    main > section#services > div#items > div.item {
-      /* width: 20%; */
-    }
-    main > section#services > div#items > div.item > ul.text > li {
+    main > section#services > div.items > div.item > ul.text > li {
       font-size: 0.8em;
       padding-left: 5vw;
     }
@@ -277,27 +309,27 @@ main > section#services > div#items > div.item > div > h3 {
 }
 
 @media (min-width: 1364px) {
-  main > section#services > div#items > div.item > div > h3 {
+  main > section#services > div.items > div.item > div > h3 {
     font-size: clamp(25px, 3vw, 40px);
   }
 }
 
 @media (max-width: 1078px) {
-  main > section#services > div#items > div.item > div > h3 {
+  main > section#services > div.items > div.item > div > h3 {
     height: 100px;
   }
   @media (max-width: 971px) {
-    /* main > section#services > div#items > div.item > div > h3 {
+    /* main > section#services > div.items > div.item > div > h3 {
       height: 100px;
       } */
-      main > section#services > div#items > div.item:nth-child(3) > div > h3, 
-      main > section#services > div#items > div.item:nth-child(4) > div > h3 
+      main > section#services > div.items > div.item:nth-child(3) > div > h3, 
+      main > section#services > div.items > div.item:nth-child(4) > div > h3 
       {
         height: 50px;
       }
       @media (max-width: 863px) {
         
-        main > section#services > div#items > div.item > div > h3 
+        main > section#services > div.items > div.item > div > h3 
         {
           height: 50px;
         }
@@ -305,7 +337,7 @@ main > section#services > div#items > div.item > div > h3 {
   }
 }
 
-main > section#services > div#items > div.item > div > h3::after {
+main > section#services > div.items > div.item > div > h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -315,23 +347,20 @@ main > section#services > div#items > div.item > div > h3::after {
   background-color: black;
   box-shadow: 10px 10px 20px var(--color-primary);
 }
-main > section#services > div#items > div.item > div > h3 > span {
+main > section#services > div.items > div.item > div > h3 > span {
   color: #af782a;
 }
 
-main > section#services > div#items > div.item > p.service-item {
+main > section#services > div.items > div.item > p.service-item {
   font-size: clamp(40px, 3vw, 55px);
   text-align: center;
   letter-spacing: 5px;
   text-shadow: 0px 40px 10px var(--color-background);
+  color: var(--color-accent);
   /* background-color: red; */
 }
 
-main > section#references {
-  /* min-height: 900px; */
-  padding-bottom: 100px;
-}
-main > section#references > div#items {
+main > section#references > div.items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -341,18 +370,18 @@ main > section#references > div#items {
   height: 100%;
   /* background-color: black; */
 }
-main > section#references > div#items > div.item {
+main > section#references > div.items > div.item {
   position: relative;
   width: 600px;
-  height: 500px;
+  height: 400px;
 }
 @media (max-width: 714px) {
-  main > section#references > div#items > div.item {
+  main > section#references > div.items > div.item {
     width: 100%;
   }
 }
 
-main > section#references > div#items > div.item > div.imglist {
+main > section#references > div.items > div.item > div.imglist {
   position: absolute;
   /* width: 100%; */
   background-color: antiquewhite;
@@ -369,12 +398,12 @@ main > section#references > div#items > div.item > div.imglist {
 }
 main
   > section#references
-  > div#items
+  > div.items
   > div.item
   > div.imglist::-webkit-scrollbar {
   display: none;
 }
-main > section#references > div#items > div.item > div.imglist > div.img {
+main > section#references > div.items > div.item > div.imglist > div.img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
@@ -386,28 +415,29 @@ main > section#references > div#items > div.item > div.imglist > div.img {
 footer {
   /* background-color: #9c5e3f; */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: end;
   flex-wrap: wrap;
-  height: 800px;
+  gap: 5%;
+  row-gap: 50px;
   max-width: 2500px;
   margin: 0 auto;
 }
 
 footer > div#footer-logo {
-  /* width: 100%; */
+  width: 35%;
   text-align: left;
+  font-size: clamp(.5em, 3vw, 1em);
 }
 
 footer > form {
-  width: 45%;
-  height: 60%;
+  width: 50%;
   text-align: end;
 }
 @media (max-width: 1025px) {
   footer {
     flex-direction: column;
-    align-items: center;
+    justify-content: right;
   }
 
   footer > form {
@@ -415,39 +445,45 @@ footer > form {
     max-width: 100%;
   }
   footer > div#footer-logo {
-    width: 80%;
-    margin: 0 auto;
+    text-align: right;
+    width: 90%;
   }
 }
 footer > form > fieldset {
-  width: 80%;
-  height: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
+  border-right: 0;
+  border-left: 0;
+  border-right: 0;
 }
-footer > form > fieldset > div:nth-child(2),
-footer > form > fieldset > div:nth-child(3) {
-  /* background-color: red; */
-  height: 13%;
-  min-height: 100px;
-  margin-bottom: 2%;
+footer > form > fieldset > div {
+  margin-bottom: 5px;
+  padding: 10px 0;
 }
 footer > form > fieldset > div > input {
   width: 70%;
-  height: 100%;
+  height: 70px;
+  font-size: 1rem;
+}
+footer > form > fieldset > div:nth-child(2),
+footer > form > fieldset > div:nth-child(3) {
 }
 footer > form > fieldset > div:nth-child(4) {
-  height: 69%;
   display: block;
   text-align: left;
+  /* height: 150px; */
+}
+footer > form > fieldset > div:nth-child(4) > label {
+  display: block;
+  width: 100%;
+  
 }
 footer > form > fieldset > div:nth-child(4) > textarea#message {
+  box-sizing: border-box;
+  resize: none;
+  height: 150px;
   width: 100%;
-  resize: vertical;
-  height: 100%;
-  max-height: 70%;
+  padding: 20px;
+  font-size: .8rem;
 }
 footer > form > fieldset > button {
   background-color: #af782a;
@@ -457,6 +493,8 @@ footer > form > fieldset > button {
   padding: 2%;
   font-size: 0.8em;
   margin: 0 auto;
+  border: none;
+  border-radius: 5% 5% 30% 5%;
 }
 footer > div#CR {
   width: 100%;
