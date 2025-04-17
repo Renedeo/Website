@@ -206,7 +206,6 @@ main > section#greeting > div#text-container {
   width: 20%;
   max-width: 900px;
   height: 100%;
-  opacity: 0;
   /* text-align: center; */
 }
 main > section#greeting > div#text-container > p {
@@ -503,13 +502,12 @@ footer > div#CR {
 
 .animation-on-visible {
   opacity: 0;
+
 }
 .visible {
   animation: appear 0.8s ease-in-out;
 }
-div#text-container.visible {
-  animation-delay: 0.5s;
-}
+
 
 @keyframes appear {
   from {

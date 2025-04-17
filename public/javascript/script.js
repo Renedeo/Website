@@ -5,21 +5,43 @@ const observer = new IntersectionObserver(
     entries.forEach((el) => {
       if (el.isIntersecting) {
         console.log("intersect");
-        console.log([...el.target.classList]);
-        if ([...el.target.classList].includes("animate-on-visible")) {
+        let targetClassList = Array.from(el.target.classList);
+        if (targetClassList.includes("animate-on-visible")) {
           observer.unobserve(el.target);
           el.target.classList.remove("animate-on-visible");
           el.target.classList.add("visible");
-          el.target.style.opacity = 1;
         }
       }
     });
   },
-  { threshold: 0.5 }
+  { threshold: 0.3 }
 );
-[...$(".animate-on-visible")].forEach((el) => {
+
+Array.from($(".animate-on-visible")).forEach((el) => {
   observer.observe(el);
 });
 
 /** form */
 
+const form = $("#contact-form");
+const data = {
+  name: form.find("#name").val(),
+  email: form.find("#email").val(),
+  message: form.find("#message").val(),
+};
+form.on("submit", async (e) => {
+  e.preventDefault();
+
+  fetch("http://localhost:3000/", {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data)
+    
+  })
+    .then((res) => res.text())
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err));
+});
