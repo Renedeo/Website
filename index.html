@@ -21,9 +21,14 @@
                 <li id="logo">Amandine CODJO</li>
                 <li class="items">
                     <ul id="nav-bar-items">
-                        <li><a href="" class="navbar-link"><i><img src="public/SVG/linkedin-color-svgrepo-com.svg"
-                                        alt=""></i></a></li>
-                        <li id="contact"><a href="">Contact</a></li>
+                        <li><a href="" class="navbar-link">
+                                <i>
+                                    <img src="public/SVG/linkedin-color-svgrepo-com.svg" alt="">
+                                </i>
+                            </a>
+                        </li>
+
+                        <li id="contact"><a href="#contact-form">Contact</a></li>
                     </ul>
                     </div>
                 </li>
@@ -40,7 +45,8 @@
             <div id="imgroup">
                 <img src="public/SVG/tools/piano.svg" class="imgplaceholder">
                 <img src="public/SVG/tools/google_analytics-horizontal.svg" class="imgplaceholder">
-                <img src="public/SVG/tools/adobe-analytics-vector-logo-seeklogo/adobe-analytics-seeklogo.svg" class="imgplaceholder">
+                <img src="public/SVG/tools/adobe-analytics-vector-logo-seeklogo/adobe-analytics-seeklogo.svg"
+                    class="imgplaceholder">
             </div>
         </section>
         <section id="greeting">
@@ -87,7 +93,7 @@
                         <li>Pertinence des dashboards et analyses</li>
                         <li>Recommandations d’optimisation</li>
                     </ul>
-                    <p class="service-item">AUDIT</p>
+                    <p class="service-item animate-on-visible">AUDIT</p>
                 </div>
                 <div class="item">
                     <div>
@@ -103,7 +109,7 @@
                         <li>Performance de l’offre</li>
                         <li>Etapes de conversion & abandon</li>
                     </ul>
-                    <p class="service-item">Starter PACK</p>
+                    <p class="service-item animate-on-visible">Starter PACK</p>
                 </div>
                 <div class="item">
                     <div>
@@ -117,7 +123,7 @@
                         <li>Tunnel : Quels points de blocage ?</li>
                         <li>XP : quels erreurs techniques ?</li>
                     </ul>
-                    <p class="service-item">INSIGHTS</p>
+                    <p class="service-item animate-on-visible">INSIGHTS</p>
                 </div>
                 <div class="item">
                     <div>
@@ -131,7 +137,7 @@
                         <li>Dashboards pertinents et exploitables</li>
                         <li>Interpréter & tirer des actions</li>
                     </ul>
-                    <p class="service-item">FORMATION</p>
+                    <p class="service-item animate-on-visible">FORMATION</p>
                 </div>
             </div>
         </section>
@@ -140,34 +146,30 @@
             <h2>MES RÉFÉRENCES</h2>
             <div class="items">
                 <div class="item">
-                    <div class="graph">graph</div>
                     <div class="imglist">
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
+                        <img src="public/images/test/auchan.png" class="img">
+                        <img src="public/images/test/decathlon.png" class="img">
+                        <img src="public/images/test/electro_depot.png" class="img">
+                        <img src="public/images/test/norauto.png" class="img">
+                        <img src="public/images/test/maggi.png" class="img">
+                        <img src="public/images/test/M6_boutique.png" class="img">
+                        <img src="public/images/test/Bizbee.png" class="img">
                     </div>
                 </div>
                 <div class="item">
-                    <div class="graph">graph</div>
                     <div class="imglist">
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
-                        <div class="img">img</div>
+                        <img src="public/images/test/Credit_Agricole.png" class="img">
+                        <img src="public/images/test/bonduelle.png" class="img">
+                        <img src="public/images/test/oney.png" class="img">
+                        <img src="public/images/test/nexity.png" class="img">
+                        <img src="public/images/test/cofidis.png" class="img">
+                        <img src="public/images/test/eurovent_certita.png" class="img">
+                        <img src="public/images/test/bureauvallee.png" class="img">
+                        <img src="public/images/test/kiabi.png" class="img">
+                        <img src="public/images/test/brice.png" class="img">
+                        <img src="public/images/test/groupepormona.png" class="img">
                     </div>
                 </div>
-            </div>
         </section>
     </main>
 
@@ -179,33 +181,34 @@
         </div>
         <form id="contact-form">
             <fieldset>
-              <legend>Me Contacter</legend>
-          
-              <div>
-                <label for="name">Name: </label>
-                <input id="name" name="name" type="text" required>
-              </div>
-          
-              <div>
-                <label for="email">Email: </label>
-                <input id="email" name="email" type="email" required>
-              </div>
-          
-              <div>
-                <label for="message">Message :</label>
-                <textarea name="message" id="message" required></textarea>
-              </div>
-          
-              <button type="submit" id="send-btn">Envoyer</button>
-              <div id="response"></div>
+                <legend>Me Contacter</legend>
+
+                <div>
+                    <label for="name">Name: </label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+
+                <div>
+                    <label for="email">Email: </label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+
+                <div>
+                    <label for="message">Message :</label>
+                    <textarea name="message" id="message" required></textarea>
+                </div>
+
+                <button type="submit" id="send-btn">Envoyer</button>
+                <div id="response"></div>
             </fieldset>
-          </form>
-          
+        </form>
+
         <div id="CR">Copyright Renedeo</div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="public/javascript/script.js"></script>
+    <script src="public/javascript/scroll-anim.js"></script>
 </body>
 
 </html>
