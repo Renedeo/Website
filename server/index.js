@@ -8,7 +8,10 @@ const port = 3000;
 app.use(
   cors({
     methods: ["POST", "GET"],
-    origin: "localhost",
+    origin: [
+      "https://website-vcoy.vercel.app",
+      "http://localhost:3000",
+    ],
   })
 );
 
