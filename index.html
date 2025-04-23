@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/styles/test/test.css" />
+    <link rel="stylesheet" href="public/styles/website/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Amandine CODJO</title>
-</head>
 </head>
 
 <body>
@@ -18,18 +17,27 @@
         </div>
         <nav>
             <ul>
-                <li id="logo">Amandine CODJO</li>
+                <li id="logo">Amandine CODJO
+                    <div id="imgroup">
+                        <img src="public/SVG/tools/piano.svg" class="imgplaceholder">
+                        <img src="public/SVG/tools/google_analytics-horizontal.svg" class="imgplaceholder">
+                        <img src="public/SVG/tools/adobe-analytics-vector-logo-seeklogo/adobe-analytics-seeklogo.svg"
+                            class="imgplaceholder">
+                    </div>
+                </li>
                 <li class="items">
-                    <ul id="nav-bar-items">
-                        <li><a href="" class="navbar-link">
-                                <i>
-                                    <img src="public/SVG/linkedin-color-svgrepo-com.svg" alt="">
-                                </i>
-                            </a>
-                        </li>
+                    <div>
+                        <ul id="nav-bar-items">
+                            <li>
+                                <a href="" class="navbar-link">
+                                    <span>
+                                        <img src="public/SVG/linkedin-color-svgrepo-com.svg" alt="">
+                                    </span>
+                                </a>
+                            </li>
 
-                        <li id="contact"><a href="#contact-form">Contact</a></li>
-                    </ul>
+                            <li id="contact"><a href="#contact-form">Contact</a></li>
+                        </ul>
                     </div>
                 </li>
             </ul>
@@ -39,15 +47,12 @@
         <section id="banner">
             <hgroup class="animate-on-visible">
                 <h1>Analytics Insights</h1>
-                <p><em>De la collecte jusqu’à l’analyse, je transforme vos indicateurs en leviers d’action concrets pour
-                        booster vos performances digitales.</em></p>
+                <p>
+                    De la collecte jusqu’à l’analyse, je transforme vos indicateurs en leviers d’action concrets pour
+                    booster vos performances digitales.
+                </p>
             </hgroup>
-            <div id="imgroup">
-                <img src="public/SVG/tools/piano.svg" class="imgplaceholder">
-                <img src="public/SVG/tools/google_analytics-horizontal.svg" class="imgplaceholder">
-                <img src="public/SVG/tools/adobe-analytics-vector-logo-seeklogo/adobe-analytics-seeklogo.svg"
-                    class="imgplaceholder">
-            </div>
+
         </section>
         <section id="greeting">
             <div id="image-container">
@@ -146,28 +151,32 @@
             <h2>MES RÉFÉRENCES</h2>
             <div class="items">
                 <div class="item">
-                    <div class="imglist">
-                        <img src="public/images/test/auchan.png" class="img">
-                        <img src="public/images/test/decathlon.png" class="img">
-                        <img src="public/images/test/electro_depot.png" class="img">
-                        <img src="public/images/test/norauto.png" class="img">
-                        <img src="public/images/test/maggi.png" class="img">
-                        <img src="public/images/test/M6_boutique.png" class="img">
-                        <img src="public/images/test/Bizbee.png" class="img">
+                    <div class="imglist animate-on-visible">
+                        <img src="public/images/sets/Credit_Agricole.png" class="img">
+                        <img src="public/images/sets/decathlon.png" class="img">
+                        <img src="public/images/sets/auchan.png" class="img">
+                        <img src="public/images/sets/bonduelle.png" class="img">
+                        <img src="public/images/sets/oney.png" class="img">
+                        <img src="public/images/sets/nexity.png" class="img">
+                        <img src="public/images/sets/cofidis.png" class="img">
                     </div>
                 </div>
                 <div class="item">
-                    <div class="imglist">
-                        <img src="public/images/test/Credit_Agricole.png" class="img">
-                        <img src="public/images/test/bonduelle.png" class="img">
-                        <img src="public/images/test/oney.png" class="img">
-                        <img src="public/images/test/nexity.png" class="img">
-                        <img src="public/images/test/cofidis.png" class="img">
-                        <img src="public/images/test/eurovent_certita.png" class="img">
-                        <img src="public/images/test/bureauvallee.png" class="img">
-                        <img src="public/images/test/kiabi.png" class="img">
-                        <img src="public/images/test/brice.png" class="img">
-                        <img src="public/images/test/groupepormona.png" class="img">
+                    <div class="imglist animate-on-visible">
+                        <img src="public/images/sets/electro_depot.png" class="img">
+                        <img src="public/images/sets/norauto.png" class="img">
+                        <img src="public/images/sets/maggi.png" class="img">
+                        <img src="public/images/sets/M6_boutique.png" class="img">
+                        <img src="public/images/sets/Bizbee.png" class="img">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="imglist animate-on-visible">
+                        <img src="public/images/sets/eurovent_certita.png" class="img">
+                        <img src="public/images/sets/bureauvallee.png" class="img">
+                        <img src="public/images/sets/kiabi.png" class="img">
+                        <img src="public/images/sets/brice.png" class="img">
+                        <img src="public/images/sets/groupepormona.png" class="img">
                     </div>
                 </div>
         </section>
@@ -177,7 +186,14 @@
         <div id="footer-logo">
             <p>Amandine CODJO</p>
             <p id="skills">Experte Digital Performance Analyse – GA4 – Piano – Adobe</p>
-            <p>Analytics Insights</p>
+            <p class="logo">Analytics Insights</p>
+            <div id="social-media">
+                <a href=""><img src="public/SVG/social/calendly.svg"></a>
+                <a href="">
+                    <img src="public/SVG/linkedin-color-svgrepo-com.svg" alt="">
+                </a>
+
+            </div>
         </div>
         <form id="contact-form">
             <fieldset>

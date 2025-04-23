@@ -1,7 +1,7 @@
 :root {
   --color-primary: #dd703a;
   --color-background: #d7b089;
-  --color-background-transparent:  #e5ac7263;
+  --color-background-transparent: #e5ac7263;
   --color-background-opaque: #e5ac72;
   --text-size-min: 5px;
   --text-size-prefered: 7vw;
@@ -14,7 +14,9 @@
     var(--text-size-max)
   );
 
-  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #f6f6f6;
 }
 
 p {
@@ -47,7 +49,7 @@ section {
   margin: 100px auto;
 }
 
-h2{
+h2 {
   color: var(--color-primary);
 }
 
@@ -70,8 +72,8 @@ header {
   font-size: clamp(0.5rem, 3vw, 1rem);
 }
 header > nav {
-  padding: 10px;
-  margin-top: 10px;
+  padding: 5px;
+  /* margin-top: 10px; */
 }
 header > nav > ul {
   list-style: none;
@@ -91,9 +93,21 @@ header > nav > ul > li#logo {
   text-align: center;
   font-size: clamp(0.5rem, 3vw, 2rem);
 }
+header > nav > ul > li#logo > div#imgroup {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  width: fit-content;
+  margin: 0 auto;
+}
+header > nav > ul > li#logo > div#imgroup > img {
+  flex-grow: 1;
+  max-width: 10%;
+}
 
-
-header > nav > ul > li.items > ul {
+header > nav > ul > li.items > div > ul {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -101,7 +115,7 @@ header > nav > ul > li.items > ul {
   gap: 3vw;
   padding: 0;
 }
-header > nav > ul > li.items > ul > li > a.navbar-link img {
+header > nav > ul > li.items > div > ul > li > a.navbar-link img {
   width: 3vw;
   max-width: 100px;
   height: auto;
@@ -109,14 +123,14 @@ header > nav > ul > li.items > ul > li > a.navbar-link img {
   padding: 5px;
   border-radius: 5px;
 }
-header > nav > ul > li.items > ul > li#contact {
+header > nav > ul > li.items > div > ul > li#contact {
   background-color: var(--color-background-opaque);
   padding: 0.5vh 3vw;
   border: none;
   border-radius: 10%;
   font-size: clamp(0.5rem, 3vw, 2rem);
 }
-header > nav > ul > li.items > ul > li#contact:hover{
+header > nav > ul > li.items > div > ul > li#contact:hover {
   background-color: var(--color-background-transparent);
 }
 
@@ -124,14 +138,14 @@ main > section#banner {
   /* height: 300px; */
   width: 100%;
   max-width: 1500px;
-  margin: 200px auto 150px;
+  margin: 100px auto 150px;
   position: relative;
   overflow: hidden;
 }
 
 main > section#banner > hgroup {
   width: 100%;
-  transition: all 2s ease-in-out;
+  transition: width 2s ease-in-out;
 }
 
 main > section#banner > hgroup > h1,
@@ -140,17 +154,16 @@ main > section#banner > hgroup > p {
   text-align: right;
   /* padding-right: 5vw; */
 }
-main > section#banner > div#imgroup {
+/* main > section#banner > div#imgroup {
   --image-size: 30%;
   display: flex;
-  justify-content: end;
+  justify-content: right;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10%;
+  gap: 2%;
   row-gap: 30px;
 }
 main > section#banner > div#imgroup > img {
-  flex-grow: 1;
-  max-width: 500px;
 }
 
 main > section#banner > div#imgroup > img {
@@ -159,7 +172,7 @@ main > section#banner > div#imgroup > img {
 }
 main > section#banner > div#imgroup::-webkit-scrollbar {
   display: none;
-}
+} */
 
 @media (min-width: 1000px) {
   main > section#banner {
@@ -176,7 +189,8 @@ main > section#banner > div#imgroup::-webkit-scrollbar {
     background-color: var(--color-background-transparent);
   }
   main > section#banner > div#imgroup {
-    justify-content: flex-start;
+    justify-content: end;
+    /* padding-right: 25%; */
   }
 
   main > section#banner > div#imgroup > img {
@@ -186,26 +200,27 @@ main > section#banner > div#imgroup::-webkit-scrollbar {
 
 main > section#greeting {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: center;
+  flex-direction: row-reverse;
+  /* justify-content: center; */
   gap: 5vw;
   flex-wrap: wrap;
   width: 100%;
 }
 
 main > section#greeting > div#image-container {
-  height: 45vw;
-  text-align: end;
-  padding-right: 10vw;
   width: 100%;
+  height: 30vh;
+  min-height:px;
+  text-align: center;
 }
 main > section#greeting > div#image-container img {
   width: 70%;
-  max-width: 500px;
+  max-width: 600px;
   height: auto;
-  box-shadow: -50px 50px 0 var(--color-background-transparent);
+  /* box-shadow: -50px 2vh 0 var(--color-background-transparent); */
 }
-@media (max-height:1000px) {
+@media (max-height: 1000px) {
   main > section#greeting > div#image-container {
     width: 50%;
     height: 25vw;
@@ -220,33 +235,40 @@ main > section#greeting > div#text-container {
   max-width: 800px;
 }
 
-@media (min-width:1000px) {
+@media (min-width: 1000px) {
   main > section#greeting > div#text-container {
     width: 100%;
     max-width: 1300px;
-  }
-  @media (min-width: 1500px) {
-    main > section#greeting {
-      gap: 50px;
-      align-items: end;
-    }
-    main > section#greeting > div#image-container {
-      width: fit-content;
-      padding-right: unset;
-      height: auto;
-      text-align: left;
-      
-    }
-    main > section#greeting > div#image-container > img{
-      width: 100%;
-      height: auto;
-    }
-    main > section#greeting > div#text-container {
-      width: 40%;
-      /* max-width: 500px; */
-    }
+    min-height: 400px;
   }
 
+  @media (min-width: 1300px) {
+    main > section#greeting > div#image-container {
+      height: 25vw;
+    }
+
+    @media (min-width: 1500px) {
+      main > section#greeting {
+        gap: 50px;
+        align-items: center;
+      }
+      main > section#greeting > div#image-container {
+        padding-right: unset;
+        height: auto;
+        width: fit-content;
+        /* text-align: left; */
+      }
+      main > section#greeting > div#image-container > img {
+        width: 100%;
+        height: auto;
+        box-shadow: 50px 100px 50px var(--color-background-transparent);
+      }
+      main > section#greeting > div#text-container {
+        width: 40%;
+        /* max-width: 500px; */
+      }
+    }
+  }
 }
 main > section#greeting > div#text-container > p {
   margin: 30px 0;
@@ -256,6 +278,7 @@ main > section#greeting > div#text-container > p {
 
 main > section#greeting > div#text-container > p#greet {
   font-size: clamp(1.5em, 3vw, 2em);
+  color: antiquewhite;
 }
 main > section#greeting > div#text-container > p.text {
   padding-left: 5vw;
@@ -286,17 +309,15 @@ main > section#services > div.items > div.item {
   max-width: 500px;
 }
 
-@media (min-width:1684px) {
+@media (min-width: 1684px) {
   main > section#services > div.items > div.item {
     max-width: 680px;
   }
-  @media (min-width:2200px) {
+  @media (min-width: 2200px) {
     main > section#services > div.items > div.item {
       width: 450px;
     }
-    
   }
-  
 }
 
 main > section#services > div.items > div.item > ul.text {
@@ -306,12 +327,13 @@ main > section#services > div.items > div.item > ul.text {
 }
 main > section#services > div.items > div.item > ul.text > li {
   margin: 10px 0;
-  white-space: nowrap;          /* empêche le retour à la ligne */
-  overflow: hidden;             /* évite les débordements visibles */
-  text-overflow: ellipsis;      /* optionnel : ajoute "..." si trop long */
+  white-space: nowrap; /* empêche le retour à la ligne */
+  overflow: hidden; /* évite les débordements visibles */
+  text-overflow: ellipsis; /* optionnel : ajoute "..." si trop long */
 
-  font-size: clamp(.8em, 3vw, 1.2em);
-  text-align: end;
+  font-size: clamp(0.8em, 1%, 5em);
+  text-align: center;
+  /* padding-left: 10%; */
 }
 main > section#services > div.items > div.item > div {
   position: relative;
@@ -322,7 +344,7 @@ main > section#services > div.items > div.item > div > img {
   max-width: 40px;
   bottom: 0;
   background-color: var(--color-background-opaque);
-  padding: 1vw;
+  padding: 2%;
   border: none;
   border-radius: 10px;
 }
@@ -340,7 +362,7 @@ main > section#services > div.items > div.item > div > h3::after {
   right: 0;
   width: 25%;
   height: 10px;
-  background-color: black;
+  background-color: var(--color-background-opaque);
   box-shadow: 10px 10px 20px var(--color-primary);
 }
 
@@ -352,7 +374,7 @@ main > section#services > div.items > div.item > p.service-item {
   font-size: clamp(1rem, 4vw, 2rem);
   text-align: center;
   letter-spacing: 5px;
-  text-shadow: 0px 40px 10px var(--color-background);
+  text-shadow: 0px 20px 10px var(--color-background);
   color: var(--color-accent);
 }
 
@@ -361,43 +383,48 @@ main > section#references > div.items {
   --bg-image: linear-gradient(
     to top,
     white 10%,
-    var(--color-background-opaque) 50%,
+    var(--color-background-transparent) 50%,
     white
   );
 
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 5vw;
+  /* gap: 3vw; */
   height: 100%;
 }
 main > section#references > div.items > div.item {
   position: relative;
   width: 100%;
-  max-width: 800px;
+  max-width: 1000px;
   height: 90vw;
   max-height: 500px;
+  background-size: 110%;
+  background-repeat: no-repeat;
 }
 main > section#references > div.items > div.item:nth-child(1) {
   background-image: var(--bg-image),
-    url("/Website/public/images/test/references/ds1.jpg");
+    url("/Website/public/images/test/references/ds2.jpg");
 }
 main > section#references > div.items > div.item:nth-child(2) {
   background-image: var(--bg-image),
-    url("/Website/public/images/test/references/ds2.jpg");
+    url("/Website/public/images/test/references/image.jpg");
+}
+main > section#references > div.items > div.item:nth-child(3) {
+  background-image: var(--bg-image),
+    url("/Website/public/images/test/references/image2.jpg");
 }
 
 main > section#references > div.items > div.item > div.imglist {
   position: absolute;
   bottom: 0;
-  /* right: 10%;
-  left: 10%; */
-  right: 0;
-  left: 0;
   display: flex;
+  left: 0;
+  right: 0;
   justify-content: flex-start;
-  gap: 10vw;
+  gap: 10%;
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -408,6 +435,13 @@ main > section#references > div.items > div.item > div.imglist {
   /* box-shadow: 0px 0px 250px #d7b089; */
   border: none;
 }
+.imglist img:first-child {
+  margin-left: 100px;
+}
+.imglist img:last-child {
+  margin-right: 100px;
+}
+
 main
   > section#references
   > div.items
@@ -416,9 +450,12 @@ main
   display: none;
 }
 main > section#references > div.items > div.item > div.imglist > img.img {
-  width: 10vw;
+  width: 15vw;
+  max-width: 170px;
   object-fit: contain; /* crop instead of distort */
-  aspect-ratio: 1; /*1;  
+  aspect-ratio: 1/1;
+  transition: all 0.8s ease-in-out;
+  /*;
   margin-right: 10px;
   flex-shrink: 0;     /* prevent shrinking if inside a flexbox */
 }
@@ -427,7 +464,6 @@ footer {
   display: flex;
   flex-direction: column;
   /* justify-content: right; */
-  flex-wrap: wrap;
   gap: 5%;
   row-gap: 10px;
   max-width: 2500px;
@@ -436,14 +472,39 @@ footer {
 }
 
 footer > div#footer-logo {
+  display: flex;
+  flex-direction: column;
+  /* height: 300px; Set to the height you want */
   font-size: clamp(0.5em, 3vw, 1em);
   padding: 10px;
   border-bottom: 15px double white;
+  
+}
+footer > div#footer-logo > p.logo {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: whitesmoke;
+  flex-grow: 1;
+}
+footer > div#footer-logo > div#social-media  {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  gap: 3vw;
+}
+footer > div#footer-logo > div#social-media  img{
+  width: 3vw;
+  max-width: 70px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-
+footer > form {
+  height: auto;
+}
 footer > form > fieldset {
   margin: 0 auto;
+  padding: 0;
   border-right: 0;
   border-left: 0;
   border-right: 0;
@@ -488,28 +549,30 @@ footer > form > fieldset > button {
   border: none;
   border-radius: 5% 5% 30% 5%;
 }
-@media (min-width:1600px) {
+@media (min-width: 1600px) {
   footer {
     flex-direction: row;
-    align-items: end;
+    flex-wrap: wrap;
+    /* align-items: end; */
     justify-content: center;
   }
   footer > div#footer-logo {
     width: 40%;
+    height: auto;
   }
   footer > form {
     width: 50%;
-    
   }
 }
 
 footer > div#CR {
   width: 100%;
   text-align: right;
+  font-size: .5em;
 }
 
 .animate-on-visible {
-  opacity: 0;
+  opacity: 0.5;
   /* background-color: red; */
 }
 .visible {
