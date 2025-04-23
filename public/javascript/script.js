@@ -32,7 +32,7 @@ const data = {
 form.on("submit", async (e) => {
   e.preventDefault();
 
-  fetch("api/send", {
+  fetch("https://website-3zpn.onrender.com/api/send", {
     method: "POST",
     mode: "cors",
     headers: {
