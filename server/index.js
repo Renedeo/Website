@@ -1,4 +1,5 @@
 const express = require("express");
+const listEndpoints = require("express-list-endpoints");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const app = express();
@@ -7,7 +8,7 @@ const port = 3000;
 app.use(
   cors({
     methods: ["POST", "GET"],
-    origin: "http://127.0.0.1:5500",
+    origin: "localhost",
   })
 );
 
@@ -18,7 +19,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.post("/", (req, res) => {
+app.post("/api/send", (req, res) => {
   const { name, email, message } = req.body;
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -27,7 +28,7 @@ app.post("/", (req, res) => {
       pass: "trfw fclf ykdz sjip",
     },
   });
-
+  
   const mailOption = {
     from: "hokecodjo@gmail.com",
     to: "baullegafribreu-4572@yopmail.com",
@@ -39,9 +40,12 @@ app.post("/", (req, res) => {
   };
   transporter.sendMail(mailOption, (err, info) => {
     if (err) throw err;
-
+    
     res.status(200).send("Email sent");
   });
 });
+
+console.log("Registered routes:");
+console.table(listEndpoints(app));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

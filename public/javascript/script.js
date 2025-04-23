@@ -32,7 +32,7 @@ const data = {
 form.on("submit", async (e) => {
   e.preventDefault();
 
-  fetch("http://localhost:3000/", {
+  fetch("api/send", {
     method: "POST",
     mode: "cors",
     headers: {

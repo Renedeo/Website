@@ -406,15 +406,15 @@ main > section#references > div.items > div.item {
 }
 main > section#references > div.items > div.item:nth-child(1) {
   background-image: var(--bg-image),
-    url("/Website/public/images/test/references/ds2.jpg");
+    url("../../images/sets/references/ds2.jpg");
 }
 main > section#references > div.items > div.item:nth-child(2) {
   background-image: var(--bg-image),
-    url("/Website/public/images/test/references/image.jpg");
+    url("../../images/sets/references/image.jpg");
 }
 main > section#references > div.items > div.item:nth-child(3) {
   background-image: var(--bg-image),
-    url("/Website/public/images/test/references/image2.jpg");
+    url("../../images/sets/references/image2.jpg");
 }
 
 main > section#references > div.items > div.item > div.imglist {

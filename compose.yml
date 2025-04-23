@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  proxy:
+    image: traefik:v2.11
+    command: --providers.docker
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: backend-dev
+    develop:
+      watch:
+        - path: ./server
+          action: sync
+          target: /usr/local/app
+    labels:
+      traefik.http.routers.backend.rule: Host(`localhost`) && PathPrefix(`/api`)
+      traefik.http.services.backend.loadbalancer.server.port: 3000
+
+  client:
+    image: nginx:alpine
+    volumes:
+      - ./public:/usr/share/nginx/html/public:ro
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+    labels:
+      traefik.http.routers.client.rule: Host(`localhost`)
+      traefik.http.services.client.loadbalancer.server.port: 80
