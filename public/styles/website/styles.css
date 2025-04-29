@@ -46,7 +46,7 @@ a:visited {
   color: #b75749;
 }
 section {
-  margin: 100px auto;
+  margin: 10% auto;
 }
 
 h2 {
@@ -54,7 +54,7 @@ h2 {
 }
 
 section:nth-child(2) {
-  margin-top: 20px;
+  margin-top: 10%;
 }
 header {
   position: fixed;
@@ -138,7 +138,7 @@ main > section#banner {
   /* height: 300px; */
   width: 100%;
   max-width: 1000px;
-  margin: 100px auto 150px;
+  margin: 50% auto 20%;
   position: relative;
   overflow: hidden;
 }
@@ -146,7 +146,6 @@ main > section#banner {
 main > section#banner > hgroup {
   width: 100%;
   transition: width 2s ease-in-out;
-  
 }
 
 main > section#banner > hgroup > h1,
@@ -174,27 +173,27 @@ main > section#banner > hgroup > p {
       main > section#banner > div#imgroup::-webkit-scrollbar {
         display: none;
         } */
-        /* @media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
           main > section#banner {
             }
             main > section#banner > hgroup {
               }
               } */
-              
-              @media (min-width: 1000px) {
-                main > section#banner {
-                  margin: 0px auto 150px;
-                  height: 300px;
-                  overflow: visible;
-                }
-                main > section#banner > hgroup {
-                  position: absolute;
-                  padding: 30px;
-                  bottom: -20%;
-                  right: 0;
-                  width: 50%;
-                  font-size: clamp(0.5rem, 5vw, 1rem);
-                  /* max-width: 850px; */
+
+@media (min-width: 1000px) {
+  main > section#banner {
+    margin: 0px auto 10%;
+    height: 300px;
+    overflow: visible;
+  }
+  main > section#banner > hgroup {
+    position: absolute;
+    padding: 30px;
+    bottom: -20%;
+    right: 0;
+    width: 50%;
+    font-size: clamp(0.5rem, 5vw, 1rem);
+    /* max-width: 850px; */
 
     background-color: var(--color-background-transparent);
   }
@@ -221,32 +220,49 @@ main > section#greeting {
   /* gap: 5vw; */
   flex-wrap: wrap;
   width: 100%;
+  height: fit-content;
 }
 
 main > section#greeting > div#image-container {
   width: 100%;
-  /* height: 30vh; */
+  /* height: 10%; */
+  margin-bottom: -20%;
   text-align: center;
-  min-height: 200px;
+  /* min-height: 200px; */
+  transition: all 0.3s ease-in-out;
 }
 main > section#greeting > div#image-container img {
   width: 70%;
   max-width: 350px;
   min-width: 300px;
   height: auto;
-  box-shadow: 0px 200px 10px 50px var(--color-background-transparent);
+  /* box-shadow: 0px 200px 10px 50px var(--color-background-transparent); */
 }
 
-@media (max-height: 1000px) {
+@media (max-width: 900px) {
   main > section#greeting > div#image-container {
-    width: 40%;
-    height: 25vw;
+    margin-bottom: -30%;
+    width: 100%;
+  }
+  main > section#greeting > div#image-container img {
+    min-width: unset;
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    main > section#greeting > div#image-container {
+      margin-bottom: -40%;
+    }
+    @media (max-width: 500px) {
+      main > section#greeting > div#image-container {
+        margin-bottom: -50%;
+      }
+    }
   }
 }
 
 main > section#greeting > div#text-container {
   background-color: var(--color-background-opaque);
-  font-size: clamp(0.5rem, 3vw, 0.7rem);
+  font-size: clamp(0.7rem, 3vw, 1rem);
   padding: 10px;
   /* flex-grow: 1; */
   width: 100%;
@@ -256,42 +272,41 @@ main > section#greeting > div#text-container {
 @media (min-width: 883px) {
   main > section#greeting > div#image-container img {
     box-shadow: -50px 30px 0px 0px var(--color-background-transparent);
-    
   }
   @media (min-width: 1000px) {
     main > section#greeting {
-    gap: 2vw;
-    align-items: center;
-  }
-  main > section#greeting > div#text-container {
-    width: 50%;
-    max-width: 500px;
-    min-height: 400px;
-    font-size: clamp(0.5em, 3vw, 0.5em);
-    width: fit-content;
-    padding-right: unset;
-  }
-  main > section#greeting > div#image-container {
-    width: fit-content;
-    height: auto;
-    padding: unset;
-    margin: unset;
-  }
-  main > section#greeting > div#image-container > img {
-    height: auto;
-    /* box-shadow: 50px 100px 50px var(--color-background-transparent); */
-  }
-  
-  @media (min-width: 1300px) {
-    main > section#greeting > div#image-container {
-      /* height: auto; */
+      gap: 2vw;
+      align-items: center;
     }
-    
-    @media (min-width: 1500px) {
-      /* main > section#greeting > div#image-container {
+    main > section#greeting > div#text-container {
+      width: 50%;
+      max-width: 500px;
+      min-height: 400px;
+      font-size: clamp(0.5em, 3vw, 0.5em);
+      width: fit-content;
+      padding-right: unset;
+    }
+    main > section#greeting > div#image-container {
+      width: fit-content;
+      height: auto;
+      padding: unset;
+      margin: unset;
+    }
+    main > section#greeting > div#image-container > img {
+      height: auto;
+      /* box-shadow: 50px 100px 50px var(--color-background-transparent); */
+    }
+
+    @media (min-width: 1300px) {
+      main > section#greeting > div#image-container {
+        /* height: auto; */
+      }
+
+      @media (min-width: 1500px) {
+        /* main > section#greeting > div#image-container {
         text-align: left;
         } */
-      /* main > section#greeting > div#image-container > img {
+        /* main > section#greeting > div#image-container > img {
         width: 100%;
         height: auto;
         box-shadow: 50px 100px 50px var(--color-background-transparent);
@@ -305,16 +320,17 @@ main > section#greeting > div#text-container {
   }
 }
 main > section#greeting > div#text-container > p {
-  margin: 30px 0;
+  margin: 20px 0;
   font-size: clamp(1em, 3vw, 1.5em);
-  padding: 10px;
+  padding: 5px;
 }
 
 main > section#greeting > div#text-container > p#greet {
-  font-size: clamp(1.5em, 3vw, 2em);
+  font-size: clamp(2em, 3vw, 2em);
   color: antiquewhite;
 }
 main > section#greeting > div#text-container > p.text {
+  font-size: clamp(1em, 3vw, 1.5em);
   padding-left: 5%;
 }
 main > section#greeting > div#text-container > p#credo {
@@ -341,8 +357,9 @@ main > section#services > div.items > div.item {
   flex-direction: column;
   width: 100%;
   max-width: 450px;
-  font-size: clamp(0.5em, 3vw, 0.9em);
+  font-size: clamp(0.7em, 3vw, 1em);
 }
+
 
 main > section#services > div.items > div.item > ul.text {
   list-style: none;
@@ -410,7 +427,7 @@ main > section#services > div.items > div.item > p.service-item {
   @media (min-width: 2000px) {
     main > section#services > div.items > div.item {
       width: 350px;
-      font-size: .7em;
+      font-size: 0.7em;
     }
   }
 }
@@ -518,7 +535,7 @@ footer > div#footer-logo {
   border-bottom: 15px double white;
 }
 footer > div#footer-logo > p.logo {
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   color: whitesmoke;
   flex-grow: 1;
 }
