@@ -104,7 +104,7 @@ header > nav > ul > li#logo > div#imgroup {
 }
 header > nav > ul > li#logo > div#imgroup > img {
   flex-grow: 1;
-  max-width: 10%;
+  max-width: 15%;
 }
 
 header > nav > ul > li.items > div > ul {
@@ -125,7 +125,7 @@ header > nav > ul > li.items > div > ul > li > a.navbar-link img {
 }
 header > nav > ul > li.items > div > ul > li#contact {
   background-color: var(--color-background-opaque);
-  padding: 0.5vh 3vw;
+  padding: 10% 10%;
   border: none;
   border-radius: 10%;
   font-size: clamp(0.5rem, 3vw, 1rem);
@@ -146,6 +146,7 @@ main > section#banner {
 main > section#banner > hgroup {
   width: 100%;
   transition: width 2s ease-in-out;
+  
 }
 
 main > section#banner > hgroup > h1,
@@ -173,26 +174,27 @@ main > section#banner > hgroup > p {
       main > section#banner > div#imgroup::-webkit-scrollbar {
         display: none;
         } */
-/* @media (min-width: 1000px) {
-  main > section#banner {
-  }
-  main > section#banner > hgroup {
-  }
-} */
-
-@media (min-width: 1000px) {
-  main > section#banner {
-    margin: 0px auto 150px;
-    height: 300px;
-    overflow: visible;
-  }
-  main > section#banner > hgroup {
-    position: absolute;
-    bottom: -20%;
-    right: 0;
-    width: 50%;
-    font-size: clamp(.5rem, 5vw, 1rem);
-    /* max-width: 850px; */
+        /* @media (min-width: 1000px) {
+          main > section#banner {
+            }
+            main > section#banner > hgroup {
+              }
+              } */
+              
+              @media (min-width: 1000px) {
+                main > section#banner {
+                  margin: 0px auto 150px;
+                  height: 300px;
+                  overflow: visible;
+                }
+                main > section#banner > hgroup {
+                  position: absolute;
+                  padding: 30px;
+                  bottom: -20%;
+                  right: 0;
+                  width: 50%;
+                  font-size: clamp(0.5rem, 5vw, 1rem);
+                  /* max-width: 850px; */
 
     background-color: var(--color-background-transparent);
   }
@@ -213,6 +215,7 @@ main > section#banner > hgroup > p {
 main > section#greeting {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row-reverse;
   /* justify-content: center; */
   /* gap: 5vw; */
@@ -229,10 +232,11 @@ main > section#greeting > div#image-container {
 main > section#greeting > div#image-container img {
   width: 70%;
   max-width: 350px;
-  min-width: 200px;
+  min-width: 300px;
   height: auto;
-  /* box-shadow: -50px 2vh 0 var(--color-background-transparent); */
+  box-shadow: 0px 200px 10px 50px var(--color-background-transparent);
 }
+
 @media (max-height: 1000px) {
   main > section#greeting > div#image-container {
     width: 40%;
@@ -242,14 +246,20 @@ main > section#greeting > div#image-container img {
 
 main > section#greeting > div#text-container {
   background-color: var(--color-background-opaque);
+  font-size: clamp(0.5rem, 3vw, 0.7rem);
   padding: 10px;
   /* flex-grow: 1; */
   width: 100%;
   max-width: 500px;
 }
 
-@media (min-width: 1000px) {
-  main > section#greeting {
+@media (min-width: 883px) {
+  main > section#greeting > div#image-container img {
+    box-shadow: -50px 30px 0px 0px var(--color-background-transparent);
+    
+  }
+  @media (min-width: 1000px) {
+    main > section#greeting {
     gap: 2vw;
     align-items: center;
   }
@@ -268,28 +278,28 @@ main > section#greeting > div#text-container {
     margin: unset;
   }
   main > section#greeting > div#image-container > img {
-    width: fit-content;
     height: auto;
-    box-shadow: 50px 100px 50px var(--color-background-transparent);
+    /* box-shadow: 50px 100px 50px var(--color-background-transparent); */
   }
-
+  
   @media (min-width: 1300px) {
     main > section#greeting > div#image-container {
       /* height: auto; */
     }
-
+    
     @media (min-width: 1500px) {
       /* main > section#greeting > div#image-container {
         text-align: left;
-      } */
+        } */
       /* main > section#greeting > div#image-container > img {
         width: 100%;
         height: auto;
         box-shadow: 50px 100px 50px var(--color-background-transparent);
-      } */
-      main > section#greeting > div#text-container {
-        width: 40%;
-        /* max-width: 500px; */
+        } */
+        main > section#greeting > div#text-container {
+          width: 40%;
+          /* max-width: 500px; */
+        }
       }
     }
   }
@@ -331,7 +341,7 @@ main > section#services > div.items > div.item {
   flex-direction: column;
   width: 100%;
   max-width: 450px;
-  font-size: clamp(.7em, 3vw, 1em);
+  font-size: clamp(0.5em, 3vw, 0.9em);
 }
 
 main > section#services > div.items > div.item > ul.text {
@@ -344,7 +354,7 @@ main > section#services > div.items > div.item > ul.text > li {
   white-space: nowrap; /* empêche le retour à la ligne */
   overflow: hidden; /* évite les débordements visibles */
   text-overflow: ellipsis; /* optionnel : ajoute "..." si trop long */
-  font-size: clamp(0.8em, 1%, .5em);
+  font-size: clamp(0.8em, 1%, 0.5em);
   text-align: center;
   /* padding-left: 10%; */
 }
@@ -384,7 +394,7 @@ main > section#services > div.items > div.item > div > h3 > span {
 }
 
 main > section#services > div.items > div.item > p.service-item {
-  font-size: clamp(.5em, 4vw, 2em);
+  font-size: clamp(0.5em, 4vw, 1em);
   text-align: center;
   letter-spacing: 5px;
   text-shadow: 0px 20px 10px var(--color-background);
@@ -395,10 +405,12 @@ main > section#services > div.items > div.item > p.service-item {
 @media (min-width: 1500px) {
   main > section#services > div.items > div.item {
     max-width: 600px;
+    font-size: 1em;
   }
   @media (min-width: 2000px) {
     main > section#services > div.items > div.item {
       width: 350px;
+      font-size: .7em;
     }
   }
 }
@@ -424,7 +436,7 @@ main > section#references > div.items {
 main > section#references > div.items > div.item {
   position: relative;
   width: 100%;
-  max-width: 1000px;
+  max-width: 500px;
   height: 90vw;
   max-height: 500px;
   background-size: 110%;
@@ -476,7 +488,7 @@ main
 }
 main > section#references > div.items > div.item > div.imglist > img.img {
   width: 15vw;
-  max-width: 170px;
+  max-width: 100px;
   object-fit: contain; /* crop instead of distort */
   aspect-ratio: 1/1;
   transition: all 0.8s ease-in-out;
@@ -494,6 +506,7 @@ footer {
   max-width: 2500px;
   margin: 0 auto;
   background-color: var(--color-background-opaque);
+  font-size: clamp(0.5rem, 3vw, 0.7rem);
 }
 
 footer > div#footer-logo {
@@ -573,7 +586,7 @@ footer > form > fieldset > button {
   border: none;
   border-radius: 5% 5% 30% 5%;
 }
-@media (min-width: 1600px) {
+@media (min-width: 1000px) {
   footer {
     flex-direction: row;
     flex-wrap: wrap;
