@@ -56,6 +56,16 @@ h2 {
 section:nth-child(2) {
   margin-top: 10%;
 }
+
+.imglist {
+  scrollbar-width: none; /* Firefox */
+}
+.imglist {
+  cursor: url('../../images/sets/scroll/scroll-horizontal-converted.cur') 16 16, auto;
+}
+.imglist::-webkit-scrollbar {
+  display: none;
+}
 header {
   position: fixed;
   right: 0;
@@ -360,7 +370,6 @@ main > section#services > div.items > div.item {
   font-size: clamp(0.7em, 3vw, 1em);
 }
 
-
 main > section#services > div.items > div.item > ul.text {
   list-style: none;
   padding: 0;
@@ -496,13 +505,7 @@ main > section#references > div.items > div.item > div.imglist {
   margin-right: 100px;
 }
 
-main
-  > section#references
-  > div.items
-  > div.item
-  > div.imglist::-webkit-scrollbar {
-  display: none;
-}
+
 main > section#references > div.items > div.item > div.imglist > img.img {
   width: 15vw;
   max-width: 100px;
@@ -514,6 +517,64 @@ main > section#references > div.items > div.item > div.imglist > img.img {
   flex-shrink: 0;     /* prevent shrinking if inside a flexbox */
 }
 
+main > section#references > div.items-inline {
+  display: none;
+}
+@media (min-width: 1000px) {
+  main > section#references > div.items {
+    display: none;
+  }
+  main > section#references {
+    position: relative;
+    overflow: hidden;
+    max-width: 2000px;
+    height: 750px;
+    border: none;
+  }
+  main > section#references > div.items-inline {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        to right,
+        #F6F6F6 10%,
+        var(--color-background-transparent) 50%,
+        #F6F6F6
+      ),
+      url("../../images/sets/references/ds2.jpg"),
+      url("../../images/sets/references/image.jpg"),
+      url("../../images/sets/references/image2.jpg");
+    background-position: center top, left top, right top, center center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: contain;
+  }
+  main > section#references > div.items-inline > div.item {
+    background-color: #f6f6f674;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  main > section#references > div.items-inline > div.item > div.imglist {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 50px;
+    width: 100%;
+  }
+  main
+    > section#references
+    > div.items-inline
+    > div.item
+    > div.imglist
+    > img.img {
+    width: 25vw;
+    max-width: 200px;
+    object-fit: contain; /* crop instead of distort */
+    aspect-ratio: 1/1;
+    transition: all 0.8s ease-in-out;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;

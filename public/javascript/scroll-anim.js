@@ -1,6 +1,6 @@
 $(function () {
   const $scrollBox = $(".imglist");
-  let initValue = 10
+  let initValue = 1
   let scrollSpeedArray = Array($scrollBox.length).fill(initValue);
   const edgeBuffer = initValue; // buffer zone to prevent jitter
 
