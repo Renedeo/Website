@@ -59,9 +59,10 @@ section:nth-child(2) {
 
 .imglist {
   scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
 }
 .imglist {
-  cursor: url('../../images/sets/scroll/scroll-horizontal-converted.cur') 16 16, auto;
+  cursor: url('../../images/sets/scroll/scroll-horizontal-converted.cur') 16 16, e-resize;
 }
 .imglist::-webkit-scrollbar {
   display: none;
@@ -491,7 +492,6 @@ main > section#references > div.items > div.item > div.imglist {
   align-items: center;
   overflow-x: scroll;
   overflow-y: hidden;
-  scroll-behavior: smooth;
   scrollbar-width: none; /* Firefox */
   background-color: transparent;
   pointer-events: none;
@@ -520,7 +520,7 @@ main > section#references > div.items > div.item > div.imglist > img.img {
 main > section#references > div.items-inline {
   display: none;
 }
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   main > section#references > div.items {
     display: none;
   }
@@ -537,7 +537,7 @@ main > section#references > div.items-inline {
     height: 100%;
   }
   main > section#references > div.items-inline > div.item {
-    background-color: #f6f6f674;
+    background-color: #f6f6f6d4;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -598,8 +598,8 @@ main > section#references > div.items-inline {
     > div.item
     > div.imglist
     > img.img {
-    width: 25vw;
-    max-width: 200px;
+    width: 15vw;
+    max-width: 150px;
     object-fit: contain; /* crop instead of distort */
     aspect-ratio: 1/1;
     transition: all 0.8s ease-in-out;
