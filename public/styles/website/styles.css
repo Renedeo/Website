@@ -532,21 +532,9 @@ main > section#references > div.items-inline {
     border: none;
   }
   main > section#references > div.items-inline {
-    display: block;
+    display: flex;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(
-        to right,
-        #F6F6F6 10%,
-        var(--color-background-transparent) 50%,
-        #F6F6F6
-      ),
-      url("../../images/sets/references/ds2.jpg"),
-      url("../../images/sets/references/image.jpg"),
-      url("../../images/sets/references/image2.jpg");
-    background-position: center top, left top, right top, center center;
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: contain;
   }
   main > section#references > div.items-inline > div.item {
     background-color: #f6f6f674;
@@ -555,6 +543,48 @@ main > section#references > div.items-inline {
     left: 0;
     right: 0;
   }
+  main > section#references > div.items-inline > div.bg-placeholder {
+    /* background-image: linear-gradient(
+        to right,
+        transparent 10%,
+        var(--color-background-transparent) 50%,
+        #F6F6F6
+      ),
+      url("../../images/sets/references/ds2.jpg"),
+      url("../../images/sets/references/image.jpg"),
+      url("../../images/sets/references/image2.jpg"); */
+      flex-grow: 1;
+      
+    }
+    main > section#references > div.items-inline > div.bg-placeholder:nth-child(1) {
+
+      background-image: linear-gradient(
+          to right,
+          transparent,
+          var(--color-background-transparent) 90%,
+          #F6F6F6 100%
+        ),
+        url("../../images/sets/references/ds2.jpg");
+    }
+    main > section#references > div.items-inline > div.bg-placeholder:nth-child(2) {
+      background-image: linear-gradient(
+        to right,
+        transparent,
+          var(--color-background-transparent) 90%,
+          #F6F6F6 100%
+        ),
+        url("../../images/sets/references/image.jpg");
+      }
+      main > section#references > div.items-inline > div.bg-placeholder:nth-child(3) {
+        background-image: linear-gradient(
+          to right,
+          transparent,
+            var(--color-background-transparent) 50%,
+            transparent
+          ),
+          url("../../images/sets/references/image2.jpg");
+        
+      }
   main > section#references > div.items-inline > div.item > div.imglist {
     display: flex;
     flex-wrap: nowrap;
