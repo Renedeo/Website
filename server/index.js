@@ -8,10 +8,7 @@ const port = 3000;
 app.use(
   cors({
     methods: ["POST", "GET"],
-    origin: [
-      "https://website-vcoy.vercel.app",
-      "http://localhost:3000",
-    ],
+    origin: ["https://website-vcoy.vercel.app"],
   })
 );
 
@@ -20,6 +17,10 @@ app.use(express.json());
 app.use(function (req, res, next) {
   console.log(req.method, "-", req.path, "-", req.ip, "-", req.headers.origin);
   next();
+});
+
+app.get("/", (req, res) => {
+  res.send("Node Mailer server");
 });
 
 app.post("/api/send", (req, res) => {
@@ -31,19 +32,34 @@ app.post("/api/send", (req, res) => {
       pass: "trfw fclf ykdz sjip",
     },
   });
-  
   const mailOption = {
-    from: "hokecodjo@gmail.com",
+    from: `"Brochure Website" <no-reply@yourdomain.com>`,
     to: "baullegafribreu-4572@yopmail.com",
-    subject: "Contact me from brochure website",
-    text: "This is a test from" + name,
-    html: `\
-    <h1> Message \</h1>\
-    <p> ${message} </p>`,
+    subject: "[BROCHURE-WEBSITE] Contact me from brochure website",
+    text: `Message from the Website contact form \n
+          Here is a message from ${name}\n\n
+          ----------------------------\n\n
+          ${message}\n\n
+          ----------------------------\n\n
+          Contact (email): ${email}`,
+    html: `Message from the Website contact form
+        <br />  
+        Here is a message from ${name}
+          <br />
+          <hr />
+          <br />
+          <p>${message}</p>
+          <br />
+          <hr />
+          <br />
+          Contact (email): ${email}`,
   };
   transporter.sendMail(mailOption, (err, info) => {
-    if (err) throw err;
-    
+    if (err) {
+      res.status(500).send("Email not sent")
+      throw err
+    };
+
     res.status(200).send("Email sent");
   });
 });

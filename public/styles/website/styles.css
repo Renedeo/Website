@@ -17,6 +17,7 @@
   font-family: Arial, Helvetica, sans-serif;
 
   background-color: #f6f6f6;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -62,7 +63,8 @@ section:nth-child(2) {
   scroll-behavior: smooth;
 }
 .imglist {
-  cursor: url('../../images/sets/scroll/scroll-horizontal-converted.cur') 16 16, e-resize;
+  cursor: url("../../images/sets/scroll/scroll-horizontal-converted.cur") 16 16,
+    e-resize;
 }
 .imglist::-webkit-scrollbar {
   display: none;
@@ -124,15 +126,24 @@ header > nav > ul > li.items > div > ul {
   justify-content: center;
   align-items: center;
   gap: 3vw;
-  padding: 0;
+  padding: 0 15px;
+}
+header > nav > ul > li.items > div > ul > li:has(img) {
+  position: relative;
 }
 header > nav > ul > li.items > div > ul > li > a.navbar-link img {
   width: 3vw;
   max-width: 50px;
-  height: auto;
   background-color: white;
+  height: auto;
   padding: 5px;
   border-radius: 5px;
+}
+header > nav > ul > li.items > div > ul > li > img {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  width: 10px;
 }
 header > nav > ul > li.items > div > ul > li#contact {
   background-color: var(--color-background-opaque);
@@ -505,7 +516,6 @@ main > section#references > div.items > div.item > div.imglist {
   margin-right: 100px;
 }
 
-
 main > section#references > div.items > div.item > div.imglist > img.img {
   width: 15vw;
   max-width: 100px;
@@ -553,38 +563,44 @@ main > section#references > div.items-inline {
       url("../../images/sets/references/ds2.jpg"),
       url("../../images/sets/references/image.jpg"),
       url("../../images/sets/references/image2.jpg"); */
-      flex-grow: 1;
-      
-    }
-    main > section#references > div.items-inline > div.bg-placeholder:nth-child(1) {
-
-      background-image: linear-gradient(
-          to right,
-          transparent,
-          var(--color-background-transparent) 90%,
-          #F6F6F6 100%
-        ),
-        url("../../images/sets/references/ds2.jpg");
-    }
-    main > section#references > div.items-inline > div.bg-placeholder:nth-child(2) {
-      background-image: linear-gradient(
+    flex-grow: 1;
+  }
+  main
+    > section#references
+    > div.items-inline
+    > div.bg-placeholder:nth-child(1) {
+    background-image: linear-gradient(
         to right,
         transparent,
-          var(--color-background-transparent) 90%,
-          #F6F6F6 100%
-        ),
-        url("../../images/sets/references/image.jpg");
-      }
-      main > section#references > div.items-inline > div.bg-placeholder:nth-child(3) {
-        background-image: linear-gradient(
-          to right,
-          transparent,
-            var(--color-background-transparent) 50%,
-            transparent
-          ),
-          url("../../images/sets/references/image2.jpg");
-        
-      }
+        var(--color-background-transparent) 90%,
+        #f6f6f6 100%
+      ),
+      url("../../images/sets/references/ds2.jpg");
+  }
+  main
+    > section#references
+    > div.items-inline
+    > div.bg-placeholder:nth-child(2) {
+    background-image: linear-gradient(
+        to right,
+        transparent,
+        var(--color-background-transparent) 90%,
+        #f6f6f6 100%
+      ),
+      url("../../images/sets/references/image.jpg");
+  }
+  main
+    > section#references
+    > div.items-inline
+    > div.bg-placeholder:nth-child(3) {
+    background-image: linear-gradient(
+        to right,
+        transparent,
+        var(--color-background-transparent) 50%,
+        transparent
+      ),
+      url("../../images/sets/references/image2.jpg");
+  }
   main > section#references > div.items-inline > div.item > div.imglist {
     display: flex;
     flex-wrap: nowrap;
@@ -636,12 +652,21 @@ footer > div#footer-logo > div#social-media {
   width: 100%;
   gap: 3vw;
 }
-footer > div#footer-logo > div#social-media img {
+footer > div#footer-logo > div#social-media > a {
+  position: relative;
+}
+  footer > div#footer-logo > div#social-media img:nth-child(1) {
   width: 3vw;
   max-width: 70px;
   background-color: white;
   padding: 10px;
   border-radius: 10px;
+}
+footer > div#footer-logo > div#social-media > a img:nth-child(2) {
+  width: 10px;
+  position: absolute;
+  top: 0px;
+  right: -5px;
 }
 
 footer > form {
@@ -663,6 +688,8 @@ footer > form > fieldset > div > input {
   font-size: 0.7rem;
   width: 100%;
   max-width: 700px;
+  outline: none;
+  padding: 5px 0;
 }
 
 footer > form > fieldset > div:nth-child(4) {
@@ -679,18 +706,18 @@ footer > form > fieldset > div:nth-child(4) > textarea#message {
   height: 150px;
   width: 100%;
   padding: 20px;
-  font-size: 0.8rem;
+  font-size: clamp(1em, 3vw, 1.5em);
   max-width: 1000px;
+  outline: none;
 }
-
+  
 footer > form > fieldset > button {
   background-color: #af782a;
   width: 20%;
   min-width: 100px;
   max-width: 200px;
-  /* padding: 2%; */
+  padding: 2%;
   font-size: 0.8em;
-  /* margin: 0 auto; */
   border: none;
   border-radius: 5% 5% 30% 5%;
 }

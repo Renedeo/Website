@@ -23,23 +23,21 @@ Array.from($(".animate-on-visible")).forEach((el) => {
 
 /** form */
 
-const form = $("#contact-form");
-const data = {
-  name: form.find("#name").val(),
-  email: form.find("#email").val(),
-  message: form.find("#message").val(),
-};
-form.on("submit", async (e) => {
+$("#contact-form").on("submit", async (e) => {
   e.preventDefault();
-
+  const data = {
+    name: $("#contact-form").find("#name").val(),
+    email: $("#contact-form").find("#email").val(),
+    message: $("#contact-form").find("#message").val(),
+  };
+  
   fetch("https://website-3zpn.onrender.com/api/send", {
     method: "POST",
     mode: "cors",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data)
-    
+    body: JSON.stringify(data),
   })
     .then((res) => res.text())
     .then((data) => console.log(data))
