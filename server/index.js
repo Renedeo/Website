@@ -9,7 +9,7 @@ const port = process.env.SERVER_PORT;
 app.use(
   cors({
     methods: ["POST", "GET"],
-    origin: ["https://website-vcoy.vercel.app"],
+    origin: ["https://www.analytics-insights.fr", "https://analytics-insights.fr/", "https://website-vcoy.vercel.app"],
   })
 );
 
