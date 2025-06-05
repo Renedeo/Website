@@ -1,9 +1,10 @@
 const express = require("express");
 const listEndpoints = require("express-list-endpoints");
 const cors = require("cors");
+require('dotenv').config()
 const nodemailer = require("nodemailer");
 const app = express();
-const port = 3000;
+const port = process.env.SERVER_PORT;
 
 app.use(
   cors({
@@ -28,13 +29,13 @@ app.post("/api/send", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "hokecodjo@gmail.com",
-      pass: "trfw fclf ykdz sjip",
+      user: process.env.NODEMAILER_AUTH_EMAIL,
+      pass: process.env.NODEMAILER_AUTH_PSWD,
     },
   });
   const mailOption = {
     from: `"Brochure Website" <no-reply@yourdomain.com>`,
-    to: "baullegafribreu-4572@yopmail.com",
+    to: process.env.NODEMAILER_EMAIL_RECEIVER,
     subject: "[BROCHURE-WEBSITE] Contact me from brochure website",
     text: `Message from the Website contact form \n
           Here is a message from ${name}\n\n
@@ -56,9 +57,9 @@ app.post("/api/send", (req, res) => {
   };
   transporter.sendMail(mailOption, (err, info) => {
     if (err) {
-      res.status(500).send("Email not sent")
-      throw err
-    };
+      res.status(500).send("Email not sent");
+      throw err;
+    }
 
     res.status(200).send("Email sent");
   });

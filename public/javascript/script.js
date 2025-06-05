@@ -30,8 +30,14 @@ $("#contact-form").on("submit", async (e) => {
     email: $("#contact-form").find("#email").val(),
     message: $("#contact-form").find("#message").val(),
   };
-  
+  $("#contact-form").find("#name").val("");
+  $("#contact-form").find("#email").val("");
+  $("#contact-form").find("#message").val("");
+  $("#contact-form").find("#response").html("");
+  console.log("test");
+
   fetch("https://website-3zpn.onrender.com/api/send", {
+  // fetch("http://localhost:3000/api/send", {
     method: "POST",
     mode: "cors",
     headers: {
@@ -40,6 +46,15 @@ $("#contact-form").on("submit", async (e) => {
     body: JSON.stringify(data),
   })
     .then((res) => res.text())
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
+    .then((data) => {
+      $("#contact-form").find("#response").html(data).css({
+        color: "green",
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      $("#contact-form").find("#response").html("Email not sent").css({
+        color: "red",
+      });
+    });
 });
